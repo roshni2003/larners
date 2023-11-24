@@ -1,6 +1,6 @@
 import GoogleIcon from '@mui/icons-material/Google';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-// import AppleIcon from '@mui/icons-material/Apple';
+import AppleIcon from '@mui/icons-material/Apple';
 
 const Home = () => {
     return (
@@ -24,25 +24,46 @@ const Home = () => {
                 <img className="girl1" alt="" src="laptop.png"></img>
             </div>
             <div className='logo'>
-                {/* <div className="google">
+                <div className='google'>
                     <div className='icon'>
                         <GoogleIcon color='primary' fontSize='small'/>
                     </div>
                     <div className='name'>
-                        <h3 className='name1'>Google</h3>
+                        <h4 className='name1'>Google</h4>
                     </div>
                 </div>
-                <div className="pinterest">
-                    <div className='icon1'>
-                        <  PinterestIcon color='primary' fontSize='small'/>
+                <div className='pinterest'>
+                    <div className='icon'>
+                        <PinterestIcon color='primary' fontSize='small'/>
                     </div>
-                    <div className='name2'>
-                        <h3 className='name3'>Pinterest</h3>
+                    <div className='name'>
+                        <h4 className='name1'>Pinterest</h4>
                     </div>
-                </div> */}
-                <div className='google'></div>
-                <div className='pinterest'></div>
-                <div className='apple'></div>
+                </div>
+                <div className='apple'>
+                    <div className='icon'>
+                        <AppleIcon color='primary' fontSize='small'/>
+                    </div>
+                    <div className='name'>
+                        <h4 className='name1'>Apple</h4>
+                    </div>
+                </div>
+                <div className='vemio'>
+                    <div className='icon'>
+                        <img alt="" src="vemio.png" height="20px" style={{marginLeft:"-10px"}}></img>
+                    </div>
+                    <div className='name'>
+                        <h4 className='name1'>Vemio</h4>
+                    </div>
+                </div>
+                <div className='finder'>
+                    <div className='icon'>
+                        <img alt="" src="finder.png" height="20px" ></img>
+                    </div>
+                    <div className='name'>
+                        <h4 className='name1'>Finder</h4>
+                    </div>
+                </div>
             </div>
         </>
     )

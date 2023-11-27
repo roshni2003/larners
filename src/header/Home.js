@@ -65,6 +65,73 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className="students">
+                <img className="future" alt="" src="future.jpg" height="300" width="450" style={{borderRadius:"30px"}}></img>
+            </div>
+            <div className="about1">
+                <div className="About Us">
+                    <h2 className="us">About Us</h2>
+                </div>
+                <div className="line">
+                    <p className="lines">Welcome to our educational platform, where learning ranscends boundaries. <br/>Discover a world of knowledge, engage in interactive courses, and embark on a journey of intellectual growth.</p>
+                </div>
+                <div className='growth'>
+                    <div className='one'>
+                        <div className='number'>
+                            <h2 className='number1'>25K</h2>
+                        </div>
+                        <div className='action'>
+                            <p className='action1'>Completed Projects.</p>
+                        </div>
+                    </div>
+                    <div className='two'>
+                        <div className='number'>
+                        <h2 className='number1'>12M</h2>
+                        </div>
+                        <div className='action'>
+                        <p className='action1'>Students Around World.</p>
+                        </div>
+                    </div>
+                    <div className='three'>
+                        <div className='number'>
+                        <h2 className='number1'>95M</h2>
+                        </div>
+                        <div className='action'>
+                        <p className='action1'>Ideas Raised Fund.</p>
+                        </div>
+                    </div>
+                    <div className='four'>
+                        <div className='number'>
+                        <h2 className='number1'>9K</h2>
+                        </div>
+                        <div className='action'>
+                        <p className='action1'>Categories Served.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='why'>
+                <div className='WHY'>WHY ACADEMICHUB?</div>
+                <div className='REASON'>It is a Diverse, industry-focused coding courses, interactive learning, experienced instructors, flexible platform, affordable, recognized certifications.</div>
+            </div>
+            <div className='reason'>
+                <div className='five'>
+                    <img alt="" src="teach.svg" style={{height:"120px",width:"100px", marginLeft:"20px", marginTop:"10px"}} />
+                    <h3 className='text'>Live Lessons</h3>
+                </div>
+                <div className='six'>
+                    <img alt="" src="free.svg" style={{height:"120px",width:"100px", marginLeft:"20px", marginTop:"10px"}} />
+                    <h3 className='text'>Courses From Basics</h3>
+                </div>
+                <div className='seven'>
+                    <img alt="" src="lang.svg" style={{height:"120px",width:"100px", marginLeft:"20px", marginTop:"10px"}} />
+                    <h3 className='text'>Free Of Cost</h3>
+                </div>
+                <div className='eight'>
+                    <img alt="" src="basic.svg" style={{height:"120px",width:"100px", marginLeft:"20px", marginTop:"10px"}} />
+                    <h3 className='text'>Multiple Languages</h3>
+                </div>
+            </div>
         </>
     )
 }

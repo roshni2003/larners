@@ -127,3 +127,150 @@ code {
   float: left;
   margin-left: 50px;
 }
+.students{
+  height: 300px;
+  width: 450px;
+  margin-top: 100px;
+  float: left;
+  margin-left: 200px;
+}
+.about1{
+  height: 300px;
+  width: 550px;
+  margin-top: 100px;
+  float: right;
+  margin-right: 200px;
+}
+.About{
+  height: 20px;
+  width: 450px;
+  margin-bottom: 8px;
+}
+.us{
+  font-size: 22px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.line{
+  height: 50px;
+  width: 550px;
+}
+.lines{
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #565958;
+}
+.growth{
+  height: 150px;
+  width: 300px;
+  margin-top: 14px;
+}
+.one{
+  height: 75px;
+  width: 150px;
+  float: left;
+}
+.three{
+  height: 75px;
+  width: 150px;
+  float: left;
+}
+.two{
+  height: 75px;
+  width: 146.5px;
+  float: right;
+}
+.four{
+  height: 75px;
+  width: 146.5px;
+  float: right;
+}
+.number{
+  height: 30px;
+  width: 146.5px;
+}
+.action{
+  height: 30px;
+  width: 146.5px;
+}
+.number1{
+  margin-top: 6px;
+  font-family: sans-serif;
+}
+.action1{
+  font-size: 13px;
+  margin-top: 2px;
+  font-family: sans-serif;
+}
+.why{
+  height: 290px;
+  width: 400px;
+  float: left;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.reason{
+  height: 450px;
+  width: 400px;
+  float: right;
+  margin-right: 300px;
+  margin-top: 50px;
+}
+.WHY{
+  height: 30px;
+  width: 400px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.REASON{
+  height: 200px;
+  width: 400px;
+  margin-top: 15px;
+  font-size: 15px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: normal;
+  line-height: 20px;
+  color:#3b3c3d;
+}
+.five{
+  height: 150px;
+  width: 150px;
+  float: left;
+  border-radius: 900px;
+  background-color: #9acadb;
+}
+.six{
+  height: 150px;
+  width: 150px;
+  float: right;
+  margin-top: 30px;
+  border-radius: 900px;
+  background-color: #d7a2db;
+  margin-right: 30px;
+}
+
+.seven{
+  height: 150px;
+  width: 150px;
+  float: left;
+  border-radius: 900px;
+  margin-top: 50px;
+  margin-left: 40px;
+  background-color: #e0b299;
+}
+
+.eight{
+  height: 150px;
+  width: 150px;
+  float: right;
+  margin-top: 70px;
+  border-radius: 900px;
+  background-color: #fccfe7;
+  margin-right: 30px;
+}
+.text{
+  text-align: center;
+}
+

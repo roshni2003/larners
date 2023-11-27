@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import { Typography, Avatar, Container, Grid, Box, TextField, Stack, Button ,IconButton,InputAdornment} from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+
 
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -9,24 +9,26 @@ import { app } from "./firebase";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
+
 const backgroundImage = 'https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg';
 
-const boxStyle = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)",
-  width: "40%",
-  height: "70%",
-  backgroundColor: "background.paper1",  // Corrected the background color
-  boxShadow: 24,
-};
+// const boxStyle = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%,-50%)",
+//   width: "40%",
+//   height: "70%",
+//   backgroundColor: "background.paper1",  // Corrected the background color
+//   boxShadow: 24,
+// };
 
-const centerStyle = {
-  position: "relative",
-  top: "50%",
-  left: "37%",
-};
+// const centerStyle = {
+//   position: "relative",
+//   top: "50%",
+//   left: "37%",
+// };
+
 
 const Login = () => {
  

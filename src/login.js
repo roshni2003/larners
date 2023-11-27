@@ -1,12 +1,15 @@
 
 import { useState } from "react";
-import { Typography, Avatar, Container, Grid, Box, TextField, Stack, Checkbox ,Button} from '@mui/material';
+import { Typography, Avatar, Container, Grid, Box, TextField, Stack, Button ,IconButton,InputAdornment} from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import { FormControlLabel } from '@mui/material';
+
 import { useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { app } from "./firebase";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
-
-const backgroundImage = 'https://as1.ftcdn.net/v2/jpg/03/55/60/70/1000_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg';
+const backgroundImage = 'https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg';
 
 const boxStyle = {
   position: "absolute",
@@ -26,8 +29,43 @@ const centerStyle = {
 };
 
 const Login = () => {
-  const [remember, setRemember] = useState(false);
+ 
   const navigate = useNavigate();
+  const [codeError, setCodeError] = useState("");
+  const [ShowPassword, setShowPassword] = useState(false);
+ 
+
+  const [PostData, setPostData] = useState({
+    email: "",
+    password: ""
+  });
+
+
+  const handlePostData = (e) => {
+    e.preventDefault();
+
+    if (PostData.email && PostData.password) {
+      signInWithEmailAndPassword(getAuth(app), PostData.email, PostData.password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          setCodeError(errorCode);
+          const errorMessage = error.message;
+          setCodeError(errorMessage);
+        });
+    } else {
+      setCodeError("Email and password are required.");
+    }
+  }
+
+
+  const handleTogglePassword = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
 
   return (
     <Grid
@@ -65,47 +103,56 @@ const Login = () => {
                   label="Username"
                   name="email"
                   autoComplete='email'
+                  value={PostData.email}
+                  onChange={(e) => setPostData({ ...PostData, email: e.target.value })}
                 />
               </Grid>
 
               <Grid item xs={12} sx={{ ml: "1cm", mr: "1cm", height: "20px", marginTop: "45px" }}>
+             
                 <TextField
                   required
                   fullWidth
-                  id="password"  // Assuming this should be the password field
+                  id="password"
                   label="Password"
-                  name="password"
-                  type="password"  // Set the input type to "password"
-                  autoComplete="current-password"
+                  value={PostData.password}
+                   type={ShowPassword ? "text" : "password"}
+                  autoComplete="new-password"
+                  onChange={(e) => setPostData({ ...PostData, password: e.target.value })}
+
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton onClick={handleTogglePassword} edge="end">
+                          {ShowPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
 
-              <Grid item xs={12} sx={{ ml: "1em", mr: "3em" ,marginTop:"45px"}}>
+              <Grid item xs={12} sx={{ ml: "1em", mr: "3em", marginTop: "45px" }}>
                 <Stack direction="row" spacing={2}>
-                  <FormControlLabel
-                    sx={{ width: "60%" }}
-                    onClick={() => setRemember(!remember)}
-                    control={<Checkbox checked={remember} />}  
-                    label="Remember me"
-                  />
+               
                   <Typography variant="body" component="span" onClick={() => { navigate("/reset-password"); }} style={{ marginTop: "10px", cursor: "pointer" }}>
                     Forgot password
                   </Typography>
                 </Stack>
               </Grid>
+              <Typography style={{ color: "red" }}>{codeError}</Typography>
               <Grid>
-                <Button type="submit" varient="contained" fullWidth="true" sx={{mt:"10px",mr:"20px",borderRadius:28,color:"#ffffff",minWidth:"170px",backgroundColor:"blue"}}>Sign in</Button>
+                <Button type="submit" variant="contained" fullWidth sx={{ mt: "10px", mr: "20px", borderRadius: 28, color: "#ffffff", minWidth: "170px", backgroundColor: "blue" }} onClick={handlePostData}>Sign in</Button>
               </Grid>
-            <Grid item xs={12} sx={{ml:"3em",mr:"3em"}}>
+              <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                 <Stack direction="row" spacing={2}>
-                    <Typography variant="body1" component="span" style={{marginTop:"10px"}}>Not registered yet ?{""}  <span style={{color:"#beb4fb",cursor:"pointer"}}
-                        onClick={()=>{
-                            navigate("/Rajistration")
-                        }}>Create an Account
-                        
-                    </span></Typography>
+                  <Typography variant="body1" component="span" style={{ marginTop: "10px"   }}>Not registered yet ?{""}  <span style={{ color: "black", cursor: "pointer" }}
+                    onClick={() => {
+                      navigate("/registration")
+                    }}>Create an Account ?
+                  </span></Typography>
                 </Stack>
-            </Grid>
+              </Grid>
             </Container>
           </Box>
         </Grid>

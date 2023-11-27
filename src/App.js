@@ -1,8 +1,8 @@
 
 import React from "react";
-import Registration from './Registration';
+import Registration  from './Registration';
 import Login from './login';
-import Forgetpassword from './forgetpassword';
+import ForgetPassword from './forgetpassword';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="registration" element={<Registration />} />
-          <Route path="reset-password" element={<Forgetpassword />} />
+          <Route path="/registration" element={<Registration  />} />
+          <Route path="/reset-password" element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>
     </>

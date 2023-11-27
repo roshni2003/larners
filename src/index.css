@@ -5,12 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #d3d3d3;
+  background-color: var(--bg-clr);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.light-theme{
+  --main-heading:black;
+  --para-clr: #3b3c3d;
+  --btn-bg-color:#19b396;
+  --btn-text-clr: fff;
+  --bg-clr:#d3d3d3;
+}
+.dark-theme{
+  --main-heading:White;
+  --para-clr: #fff;
+  --btn-bg-color:#19b396;
+  --btn-text-clr: #fff;
+  --bg-clr:#111b20;
+}
+.btn{
+  background-color: var(--btn-bg-color);
+  border-radius: 50px;
+  height: 30px;
+  margin-top: 100px;
+  margin-left: 500px;
 }
 .about{
   height: 290px;
@@ -28,6 +49,7 @@ code {
   word-spacing: 3px;
   line-height: 40px;
   font-family: sans-serif;
+  color: var(--main-heading);
 }
 .paragraph{
   height: 100px;
@@ -38,6 +60,7 @@ code {
   font-family: sans-serif;
   font-size: 15px;
   color: #7a7a77;
+  color: var(--para-clr)
 }
 .search{
   height: 40px;
@@ -60,7 +83,8 @@ code {
   float: right;
   height: 40px;
   width: 80px;
-  background-color: #19b396 ;
+  background-color: var(--btn-bg-color) ;
+  color: var(--btn-text-clr);
   border-radius: 50px;
   margin-right: 4px;
 }
@@ -101,6 +125,7 @@ code {
   margin-top: 0px;
   font-size: 18px;
   font-family: sans-serif;
+  color: var(--main-heading);
 }
 
 .pinterest{
@@ -149,6 +174,7 @@ code {
 .us{
   font-size: 22px;
   font-family: 'Courier New', Courier, monospace;
+  color: var(--main-heading);
 }
 .line{
   height: 50px;
@@ -157,7 +183,7 @@ code {
 .lines{
   font-size: 15px;
   font-family: sans-serif;
-  color: #565958;
+  color: var( --para-clr);
 }
 .growth{
   height: 150px;
@@ -195,11 +221,13 @@ code {
 .number1{
   margin-top: 6px;
   font-family: sans-serif;
+  color: var(--main-heading);
 }
 .action1{
   font-size: 13px;
   margin-top: 2px;
   font-family: sans-serif;
+  color: var( --para-clr);
 }
 .why{
   height: 290px;
@@ -221,6 +249,7 @@ code {
   font-size: 25px;
   font-weight: bold;
   font-family: sans-serif;
+  color: var(--main-heading);
 }
 .REASON{
   height: 200px;
@@ -233,6 +262,7 @@ code {
   font-weight: normal;
   line-height: 20px;
   color:#3b3c3d;
+  color: var( --para-clr);
 }
 .five{
   height: 150px;
@@ -272,5 +302,6 @@ code {
 }
 .text{
   text-align: center;
+  color: var(--main-heading);
 }
 

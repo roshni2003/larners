@@ -1,10 +1,23 @@
+import React, {useState, useEffect} from 'react';
 import GoogleIcon from '@mui/icons-material/Google';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import AppleIcon from '@mui/icons-material/Apple';
-
 const Home = () => {
+    const [theme, setTheme]  = useState("light-theme");
+    const toggleTheme =()=>{
+        if (theme === "dark-theme"){
+            setTheme("light-theme");
+        }else{
+            setTheme("dark-theme");   
+        }
+    }
+    useEffect (()=> {
+        document.body.className = theme;
+    },[theme])
+
     return (
         <>
+            <button herf="#" className='btn' onClick={()=> toggleTheme()}>Change Theme </button>
             <div className="about">
                 <div className="slogan">
                     <h2 className="slogan1">Unlocking Learning  <br /> Journeys and Inspiring <br /> Success Together.</h2>

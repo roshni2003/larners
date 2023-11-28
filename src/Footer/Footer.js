@@ -8,10 +8,13 @@ const Footer = () => {
     backgroundColor: 'white',
     color: 'black',
     textAlign: 'center',
-    padding: '20px',
+    // padding: '10px',
+    padding: '0px 20px',
     position: 'absolute',
     bottom: '0',
     width: '100%',
+    
+
   };
 
   const sectionStyle = {
@@ -23,12 +26,11 @@ const Footer = () => {
   const columnStyle = {
     flex: '1',
     padding: '10px',
-    // borderRight: '1px solid #ccc',
   };
   const iconStyle = {
-    fontSize: '2rem', // Adjust icon size as needed
-    margin: '0 10px', // Adjust margin between icons
-    color: '#3f51b5', // Example color
+    fontSize: '1.5rem', 
+    margin: '0 10px', 
+    color: '#3f51b5',
   };
 
   return (
@@ -46,16 +48,12 @@ const Footer = () => {
       </div>
             </p>
 
-
           </div>
           <div style={columnStyle}>
             <h3>Information</h3>
             <p>Privacy policy</p>
-            {/* <br></br> */}
             <p>Membership</p>
-            {/* <br></br> */}
             <p>Purchases Guide</p>
-            {/* <br></br> */}
             <p>Terms of service</p>
           </div>
           <div style={columnStyle}>

@@ -8,7 +8,34 @@ import Home from "./header/Home"
 function App() {
   return (
     <>
+
+       
+       <BrowserRouter>
+          <Routes>
+            
+            <Route path="/css" element={<Css />} />
+            <Route path="/english" element={<English />} />
+            <Route path="/javascript" element={<Javascript />} />
+            <Route path="/ract" element={<Ract />} />
+            <Route path="/html" element={<Html />} />
+            <Route path='/' element={<Navbar/>}>
+            <Route path='about' element={<About/>}></Route>
+            <Route path='payment' element={<PaymentStatus/>}></Route>
+            <Route path='feedback' element={<Feedback/>}></Route>
+            <Route path='contact' element={<Contact/>}></Route>
+            {/* <Route path="/" element={<Courses />} /> */}
+            {/* <Route path="/css" element={<Css />} />
+            <Route path="/english" element={<English />} />
+            <Route path="/javascript" element={<Javascript />} />
+            <Route path="/ract" element={<Ract />} />
+            <Route path="/html" element={<Html />} /> */}
+            </Route>
+          </Routes>
+
+       </BrowserRouter>
+       <Footer/>
       <Home/>
+      {/* <AddPost/> */}
       {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -21,3 +48,4 @@ function App() {
 }
 
 export default App;
+

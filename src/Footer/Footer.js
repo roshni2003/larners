@@ -10,9 +10,12 @@ const Footer = () => {
     textAlign: 'center',
     // padding: '10px',
     padding: '0px 20px',
-    position: 'absolute',
-    bottom: '0',
+    // position: 'absolute',
+    // bottom: '0',
     width: '100%',
+    // marginTop: 'auto', 
+    position: 'fixed',
+    bottom: '0',
     
 
   };
@@ -20,7 +23,7 @@ const Footer = () => {
   const sectionStyle = {
     display: 'flex',
     justifyContent: 'space-around',
-    marginTop: '10px',
+    // marginTop: '10px',
   };
 
   const columnStyle = {

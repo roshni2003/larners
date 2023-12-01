@@ -1,6 +1,29 @@
 
-import React from 'react'
+
+
+import './App.css';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from './header/Navbar';
 import Home from "./header/Home"
+import About from './header/About';
+import PaymentStatus from './header/PaymentStatus';
+import Feedback from './header/Feedback';
+import Contact from './header/Contact';
+import Footer from './Footer/Footer';
+// import Courses from './Courses';
+import Css from './languages/Css';
+import English from './languages/English';
+import Javascript from './languages/Javacript';
+import Ract from './languages/Ract';
+import Html from './languages/Html';
+
+// import AddPost from '../AddPost';
+
+
+
+
+// import React from "react";
+
 // import Registration  from './Registration';
 // import Login from './login';
 // import ForgetPassword from './forgetpassword';
@@ -9,7 +32,7 @@ function App() {
   return (
     <>
 
-       
+      
        <BrowserRouter>
           <Routes>
             
@@ -33,8 +56,9 @@ function App() {
           </Routes>
 
        </BrowserRouter>
+       <Home/>
        <Footer/>
-      <Home/>
+      {/* <Home/> */}
       {/* <AddPost/> */}
       {/* <BrowserRouter>
         <Routes>

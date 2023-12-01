@@ -4,6 +4,9 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import AppleIcon from '@mui/icons-material/Apple';
 const Home = () => {
     const [theme, setTheme]  = useState("light-theme");
+    const [searchTerm, setSearchTerm] = useState("");
+    const [searchHistory, setSearchHistory] = useState([]);
+
     const toggleTheme =()=>{
         if (theme === "dark-theme"){
             setTheme("light-theme");
@@ -11,6 +14,13 @@ const Home = () => {
             setTheme("dark-theme");   
         }
     }
+    const handleSearch = () => {
+        // Update search history and clear input
+        setSearchHistory((prevHistory) => [...prevHistory, searchTerm]);
+        setSearchTerm("");
+      };
+    
+
     useEffect (()=> {
         document.body.className = theme;
     },[theme])
@@ -27,8 +37,16 @@ const Home = () => {
                 </div>
                 <div className="search">
                     <div className="bar">
-                        <input type="text" className="search-input" />
-                        <button type="button" className="search1">Search</button>
+                        <input type="text" className="search-input" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+                        <button type="button" className="search1" onClick={handleSearch}>Search</button>
+                        <div className="search-history">
+                            <h3>Search History:</h3>
+                            <ul>
+                                {searchHistory.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
@@ -149,3 +167,79 @@ const Home = () => {
     )
 }
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import GoogleIcon from '@mui/icons-material/Google';
+// import PinterestIcon from '@mui/icons-material/Pinterest';
+// import AppleIcon from '@mui/icons-material/Apple';
+
+// const Home = () => {
+//     const [theme, setTheme] = useState("light-theme");
+//     const [searchTerm, setSearchTerm] = useState("");
+//     const [searchHistory, setSearchHistory] = useState([]);
+
+//     const toggleTheme = () => {
+//         if (theme === "dark-theme") {
+//             setTheme("light-theme");
+//         } else {
+//             setTheme("dark-theme");
+//         }
+//     }
+
+//     const handleSearch = () => {
+//         // Update search history and clear input
+//         setSearchHistory((prevHistory) => [...prevHistory, searchTerm]);
+//         setSearchTerm("");
+//     };
+
+//     useEffect(() => {
+//         document.body.className = theme;
+//     }, [theme]);
+
+//     return (
+//         <>
+//             <button href="#" className='btn' onClick={() => toggleTheme()}>Change Theme </button>
+//             <div className="about">
+//                 <div className="slogan">
+//                     <h2 className="slogan1">Unlocking Learning  <br /> Journeys and Inspiring <br /> Success Together.</h2>
+//                 </div>
+//                 <div className="paragraph">
+//                     <p className="paragraph1">Illuminating Minds Inspiring<br /> Futures: Where Knowledge Meets Innovation<br /> on our Education Platform.</p>
+//                 </div>
+//                 <div className="search">
+//                     <div className="bar">
+//                         <input type="text" className="search-input" value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}
+//                         />
+//                         <button type="button" className="search1" onClick={handleSearch}>
+//                             Search
+//                         </button>
+//                         <div className="search-history">
+//                             <h3>Search History:</h3>
+//                             <ul>
+//                                 {searchHistory.map((item, index) => (
+//                                     <li key={index}>{item}</li>
+//                                 ))}
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             {/* ... rest of the components ... */}
+//         </>
+//     );
+// }
+
+// export default Home;

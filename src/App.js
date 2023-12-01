@@ -28,9 +28,6 @@ import Html from './languages/Html';
 // import Login from './login';
 // import ForgetPassword from './forgetpassword';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-
 function App() {
   return (
     <>

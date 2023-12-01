@@ -9,7 +9,7 @@ function App() {
   return (
     <>
 
-       
+{/*        
        <BrowserRouter>
           <Routes>
             
@@ -22,18 +22,18 @@ function App() {
             <Route path='about' element={<About/>}></Route>
             <Route path='payment' element={<PaymentStatus/>}></Route>
             <Route path='feedback' element={<Feedback/>}></Route>
-            <Route path='contact' element={<Contact/>}></Route>
+            <Route path='contact' element={<Contact/>}></Route> */}
             {/* <Route path="/" element={<Courses />} /> */}
             {/* <Route path="/css" element={<Css />} />
             <Route path="/english" element={<English />} />
             <Route path="/javascript" element={<Javascript />} />
             <Route path="/ract" element={<Ract />} />
             <Route path="/html" element={<Html />} /> */}
-            </Route>
+            {/* </Route>
           </Routes>
 
        </BrowserRouter>
-       <Footer/>
+       <Footer/> */}
       <Home/>
       {/* <AddPost/> */}
       {/* <BrowserRouter>

@@ -27,6 +27,7 @@ import Registration  from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
 function App() {
+ 
   return (
     <>
 

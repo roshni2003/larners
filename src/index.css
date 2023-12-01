@@ -304,4 +304,56 @@ code {
   text-align: center;
   color: var(--main-heading);
 }
+.course{
+  height:650px ;
+  margin-top:1570px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.html{
+  height:300px ;
+  width:340px;
+  float:left;
+}
+.css{
+  height:300px ;
+  width:339px;
+  float:left;
+  margin-left:10px;
+}
+.python{
+  height:300px ;
+  width:349px;
+  float:left;
+  margin-left:10px;
+}
+.js{
+  height:300px ;
+  width:339px;
+  float:right;
+  margin-left:10px;
+  margin-top: 20px;
+}
+.c{
+  height:300px ;
+  width:340px;
+  float:right;
+  margin-left:10px;
+  margin-top: 20px;
+}
+.java{
+  height:300px ;
+  width:340px;
+  float:right;
+  margin-top: 20px;
+  
+
+}
+.link{
+  font-size: 15px;
+  margin-bottom: 3px;
+  font-weight: bold ;
+  font-family: sans-serif;
+  color: var(--main-heading);
+}
 

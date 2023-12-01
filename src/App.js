@@ -1,19 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './header/Header'
-import Cource from './header/Cource'
+import About from './header/About'
 
 
 
 function App() {
-  const handleSelect = (selectedValue) => {
-    console.log('Selected value:', selectedValue);
-    
-  };
-
+ 
   return (
     <div>
-      <Cource/>
+      <About/>
     
     </div>)
 }

@@ -1,43 +1,56 @@
 import React, { useState, useEffect } from 'react';
 
-const JavaScript = () => {
-  const [challenges, setChallenges] = useState([]);
+const Javascript = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch JavaScript challenges from freeCodeCamp API
-    fetch('https://api.freecodecamp.org/api/studyplan/get-public-study-group')
-      .then(response => response.json())
-      .then(data => {
-        // Log the data to the console for inspection
-        console.log(data);
-
-        // Check if the challenges property exists in the response
-        if (data && data.challenges) {
-          // Update state with fetched challenges
-          setChallenges(data.challenges);
-        } else {
-          // Handle the case where challenges property is missing
-          setError('Challenges data not found');
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/courses');
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
         }
-      })
-      .catch(error => {
-        // Update state with the error
+
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error('Invalid response format. Expected JSON.');
+        }
+
+        const result = await response.json();
+        console.log('Data:', result.courses);
+        setData(result.courses);
+      } catch (error) {
+        console.error('Error fetching data:', error);
         setError(error.message);
-      });
-  }, []); // Empty dependency array ensures useEffect runs only once on mount
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
-    <div>
-      <h1>JavaScript Challenges from freeCodeCamp</h1>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', backgroundColor: '#f0f0f0' }}>
+      {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
-      <ul>
-        {challenges.map(challenge => (
-          <li key={challenge._id}>{challenge.name}</li>
-        ))}
-      </ul>
+      {data && (
+        <div>
+          <ul>
+            {data.map((course) => (
+              <li key={course.id}>
+                <h1>{course.name}</h1>
+                {/* Render other details of the course */}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
 
-export default JavaScript;
+export default Javascript;

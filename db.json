@@ -1,14 +1,35 @@
 {
-  "posts": [
+  "courses": [
     {
-      "what is js?":"JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.",
-      "why we use js ": "json-server",
-      "author": "typicode"
-    },{"name":"nikita",
-      "subject":"python"
-
+      "id": 1,
+      "name": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript.",
+      "instructor": "John Doe",
+      "duration": "4 weeks",
+      "level": "Beginner",
+      "topics": [
+        "Variables and Data Types",
+        "Control Flow",
+        "Functions",
+        "Arrays and Objects",
+        "DOM Manipulation"
+      ],
+      "resources": [
+        { "title": "JavaScript Basics", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" },
+        { "title": "MDN - Asynchronous programming", "link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous" },
+        { "title": "React.js - A JavaScript library for building user interfaces", "link": "https://reactjs.org/" }
+    
+      ],
+      "videos": [
+        { "title": "JavaScript Fundamentals", "link": "https://www.youtube.com/watch?v=kaNh1irWpD8" }
+    
+      ],
+      "images": [
+        { "title": "JavaScript Logo", "link": "0x300a0a0.jpeg" }
+        
+      ]
     }
+    
   ]
-  
-  
 }
+

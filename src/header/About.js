@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Select, MenuItem, Menu, Button } from '@mui/material';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
 
 import Javascript from "./Javascript";
 import Cplush from "./Cplush";
 import Node from "./Node";
-import Hindi from "./Hindi";
+import Python from "./Python";
 import English from "./English";
 
-const Cource = () => {
+const About = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -38,41 +38,39 @@ const Cource = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem component={Link} to="/Javascript" onClick={handleClose}>
+              <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose}>
                 Javascript
               </MenuItem>
-            
-              <MenuItem component={Link} to="/Cplush" onClick={handleClose}>
+              <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose}>
                 c++
               </MenuItem>
-              <MenuItem component={Link} to="/React" onClick={handleClose}>
+              <MenuItem component={Link} to="/Cource/React" onClick={handleClose}>
                 React
               </MenuItem>
-              <MenuItem component={Link} to="/Node" onClick={handleClose}>
+              <MenuItem component={Link} to="/Cource/Node" onClick={handleClose}>
                 Node
               </MenuItem>
-              <MenuItem component={Link} to="/Hindi" onClick={handleClose}>
-                Hindi
+              <MenuItem component={Link} to="/Cource/Python" onClick={handleClose}>
+                python
               </MenuItem>
-              <MenuItem component={Link} to="/English" onClick={handleClose}>
+              <MenuItem component={Link} to="/Cource/English" onClick={handleClose}>
                 English
               </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
 
+        {/* Conditionally apply background image styling for the /Cource route */}
         <Routes>
-          <Route path="/Javascript" element={<Javascript />} />
-          <Route path="/Hindi" element={<Hindi />} />
-          <Route path="/English" element={<English />} />
-          <Route path="/Cplush" element={<Cplush />} />
-          <Route path="/Node" element={<Node />} />
-          <Route path="/React" element={<div>React Component</div>} />
-          
+          <Route path="/Cource/Javascript/*" element={<Javascript />} />
+          <Route path="/Cource/Cplush/*" element={<Cplush />} />
+          <Route path="/Cource/Node/*" element={<Node />} />
+          <Route path="/Cource/Python/*" element={<Python/>} />
+          <Route path="/Cource/English/*" element={<English />} />
         </Routes>
       </div>
     </Router>
   );
 };
 
-export default Cource;
+export default About;

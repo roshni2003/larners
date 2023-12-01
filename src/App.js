@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './header/Header'
-import About from './header/About'
+import About from './header/Course'
+import Course from './header/Course';
 
 
 
@@ -9,7 +10,7 @@ function App() {
  
   return (
     <div>
-      <About/>
+      <Course/>
     
     </div>)
 }

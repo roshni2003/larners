@@ -8,7 +8,7 @@ import Node from "./Node";
 import Python from "./Python";
 import English from "./English";
 
-const About = () => {
+const Course = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -73,4 +73,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Course;

@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { AppBar, Toolbar, Button } from '@mui/material';
-import Course from './Course';
+import { AppBar, Toolbar,Button } from '@mui/material';
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "white" }}>
+     <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Toolbar>
           <img
             src="logo.jpeg"
@@ -20,12 +19,13 @@ const Navbar = () => {
             
           />
           <div style={coursesStyle}>
-            <Course/>
+          
           </div>
           <Button color="inherit"><Link to="/Course" style={linkStyle}>Course</Link></Button>
           <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>
           <Button color="inherit"><Link to="/feedback" style={linkStyle}>Feedback</Link></Button>
           <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>
+          <Button color="inherit"><Link to="/register" style={linkStyle}>Register</Link></Button>
         </Toolbar>
       </AppBar>
       <Outlet />

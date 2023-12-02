@@ -1,5 +1,11 @@
+import React from 'react';
 import React from "react";
 import './App.css';
+import Routing from './Routing';
+import Home from './header/Home';
+import AddPost from './AddPost';
+import Footer from './Footer/Footer';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './header/Navbar';
 import Home from "./header/Home";
@@ -16,6 +22,11 @@ import ForgetPassword from './forgetpassword';
 function App() {
   return (
     <>
+     
+     <Routing />
+      <Home />
+      <AddPost />
+      <Footer />
       <BrowserRouter>
         <Routes>
       
@@ -42,3 +53,5 @@ function App() {
 }
 
 export default App;
+
+

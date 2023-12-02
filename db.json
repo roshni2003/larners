@@ -1,19 +1,88 @@
 {
-  "posts": [
+  "Signup": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "neha",
+      "email": "neha20navgrukul",
+      "phone": "322424242",
+      "feedback": "i am student",
+      "id": 65
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "",
+      "email": "",
+      "phone": "",
+      "feedback": "",
+      "id": 66
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "feedback": "",
+      "id": 67
+    },
+    {
+      "name": "ashu",
+      "email": "ashu",
+      "phone": "",
+      "feedback": "",
+      "id": 68
+    },
+    {
+      "name": "",
+      "email": "ashu@gmail.com",
+      "phone": "12345678",
+      "feedback": "give me more info",
+      "id": 69
+    },
+    {
+      "name": "appu",
+      "email": "aapu@navgurukul.org",
+      "phone": "9890422712",
+      "feedback": "correct some question",
+      "id": 70
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "feedback": "",
+      "id": 71
+    },
+    {
+      "name": "alpanachavan",
+      "email": "alpanachavan@navgurukul.org",
+      "phone": "0908987544567",
+      "feedback": "good job",
+      "id": 72
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "feedback": "",
+      "id": 73
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "feedback": "",
+      "id": 74
+    },
+    {
+      "name": "aapi ",
+      "email": "wertyuiopojhgfds",
+      "phone": "qwertyuiokjhgfds",
+      "feedback": "zxcvbnmkiuytr",
+      "id": 75
+    },
+    {
+      "name": "aashi",
+      "email": "ashigupta ",
+      "phone": "34567",
+      "feedback": "best ever",
+      "id": 76
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

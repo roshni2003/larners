@@ -1,8 +1,6 @@
-
-
-
+import React from 'react';
 import './App.css';
-import React from "react"
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './header/Navbar';
 import Home from "./header/Home"
@@ -15,19 +13,23 @@ import Footer from './Footer/Footer';
 import Css from './languages/Css';
 import English from './languages/English';
 import Javascript from './languages/Javacript';
-import Ract from './languages/Ract';
+import Ract from './languages/React';
 import Html from './languages/Html';
 import AddPost from './AddPost';
 import Registration  from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
-import Courses from './header/Courses';
+import Course from './header/Course';
+
+// import Routing from './Routing';
+
 
 
 
 function App() {
   return (
     <>
+
 
        
        <BrowserRouter>
@@ -50,7 +52,7 @@ function App() {
             <Route path='payment' element={<PaymentStatus/>}></Route>
             <Route path='feedback' element={<Feedback/>}></Route>
             <Route path='contact' element={<Contact/>}></Route> 
-             <Route path="/" element={<Courses />} />
+             <Route path="/" element={<Course />} />
              <Route path="/css" element={<Css />} />
             <Route path="/english" element={<English />} />
             <Route path="/javascript" element={<Javascript />} />

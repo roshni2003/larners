@@ -1,7 +1,7 @@
 import React from "react";
-const Ract=()=>{
+const nodeReact=()=>{
     return(
         <div>hii its me</div>
     )
 }
-export default Ract;
+export default nodeReact;

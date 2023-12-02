@@ -1,6 +1,10 @@
 
 import React from 'react';
-import { AppBar, Toolbar,Button } from '@mui/material';
+
+import { AppBar, Toolbar, Button } from '@mui/material';
+// import Courses from './Courses';
+
+
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {

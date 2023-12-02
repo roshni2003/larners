@@ -76,7 +76,7 @@ const Feedback = () => {
         
         <div style={contactStyle}>
 
-            < form style={formStyle}>
+            <form style={formStyle}>
                 <div>
                     <label htmlFor="username" style={labelStyle}>
                         Username

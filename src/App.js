@@ -4,6 +4,7 @@ import Routing from './Routing';
 import Home from './header/Home';
 import AddPost from './AddPost';
 import Footer from './Footer/Footer';
+import StudentProfile from './student/StudentProfile';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <AddPost />
       <Footer />
+      <StudentProfile/>
     </>
   );
 }

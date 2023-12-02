@@ -11,8 +11,8 @@ const StudentProfile = () => {
   useEffect(() => {
     
     setStuId('123');
-    setStuEmail('example@email.com');
-    setStuName('John Doe');
+    setStuEmail('krantiwaghmare21@navgurukul.org.com');
+    setStuName('Kranti Waghmare');
     setStuOcc('Student');
   }, []);
 

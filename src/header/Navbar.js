@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-import Courses from './Courses';
+import { AppBar, Toolbar, Button } from '@mui/material';
+import Course from './Course';
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -20,9 +20,9 @@ const Navbar = () => {
             
           />
           <div style={coursesStyle}>
-            <Courses />
+            <Course/>
           </div>
-          <Button color="inherit"><Link to="/about" style={linkStyle}>About</Link></Button>
+          <Button color="inherit"><Link to="/Course" style={linkStyle}>Course</Link></Button>
           <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>
           <Button color="inherit"><Link to="/feedback" style={linkStyle}>Feedback</Link></Button>
           <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>

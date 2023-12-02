@@ -5,6 +5,7 @@ import Routing from './Routing';
 import Home from './header/Home';
 import AddPost from './AddPost';
 import Footer from './Footer/Footer';
+import StudentProfile from './student/StudentProfile';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './header/Navbar';
@@ -27,27 +28,9 @@ function App() {
       <Home />
       <AddPost />
       <Footer />
-      <BrowserRouter>
-        <Routes>
-      
-          <Route path='/' element={<Navbar />}>
-            <Route path='/payment' element={<PaymentStatus />} />
-            <Route path='/feedback' element={<Feedback />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path="/Course" element={<Course/>} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      <Footer />
-      <Home />
-      <AddPost />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="/reset-password" element={<ForgetPassword />} />
-        </Routes>
-      </BrowserRouter>
+
+      <StudentProfile/>
+
     </>
   );
 }

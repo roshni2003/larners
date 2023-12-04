@@ -54,12 +54,12 @@ function App() {
             <Route path='feedback' element={<Feedback/>}></Route>
              {/* <Route path='/' element={<Dataview/>}></Route> */}
              <Route path='/feedbackdata' element={<FeedbackData/>}></Route>
-            
+             <Route index element={<Home />} />
           </Route>
         </Routes>
 
       </BrowserRouter>
-      <Home />
+      {/* <Home /> */}
       <Footer />
 
       {/* <Home/>

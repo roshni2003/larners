@@ -27,7 +27,7 @@ const Feedback = () => {
 
     const formStyle = {
 
-        width: '800px',
+        width: '700px',
         padding: '60px',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         borderRadius: '10px',

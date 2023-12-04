@@ -17,8 +17,8 @@ const Navbar = () => {
             alt="Logo"
             width="120"
             height="50"
-            
-          />
+            />
+            <h6>heyyy</h6>
           <div style={coursesStyle}>
             <Courses />
           </div>

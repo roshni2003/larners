@@ -14,10 +14,8 @@ const AddPost = () => {
       });
 
       if (response.ok) {
-        // Post added successfully
         console.log('Post added');
       } else {
-        // Handle error if needed
         console.error('Failed to add post');
       }
     } catch (error) {

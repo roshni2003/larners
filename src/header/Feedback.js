@@ -86,10 +86,7 @@ const Feedback = () => {
 
     return (
 
-        <div style={contactStyle}>
-              
-            <form style={formStyle}>
-              
+
                 <div>
                 <h2>Share Your Feedback 😇</h2>
                     <label htmlFor="username" style={labelStyle}>

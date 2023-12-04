@@ -9,6 +9,11 @@ import { app } from "./firebase";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
+// // import { useNavigate } from 'react-router-dom';
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { app } from "./firebase";
+// import VisibilityIcon from "@mui/icons-material/Visibility";
+// import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const backgroundImage = 'https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg';
 
@@ -28,6 +33,7 @@ const centerStyle = {
   top: "50%",
   left: "37%",
 };
+
 
 
 const Login = () => {
@@ -162,5 +168,7 @@ const Login = () => {
     </Grid>
   );
 };
+
+
 
 export default Login;

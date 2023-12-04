@@ -12,35 +12,27 @@ import Html from './languages/Html';
 import Registration from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
-
+import StudentProfile from './student/StudentProfile';
 const Routing = () => {
     return (
         <BrowserRouter>
-            <Navbar/>
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Login />} />
+                <Route index element={<Home />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/reset-password" element={<ForgetPassword />} />
-
-                <Route
-                    path="/"
-                    element={
-                        <>
-                            <Routes>
-                                <Route index element={<Course />} />
-                                <Route path="about" element={<Course />} />
-                                <Route path="payment" element={<PaymentStatus />} />
-                                <Route path="feedback" element={<Feedback />} />
-                                <Route path="contact" element={<Contact />} />
-                                <Route path="css" element={<Css />} />
-                                <Route path="english" element={<English />} />
-                                <Route path="javascript" element={<Javascript />} />
-                                <Route path="ract" element={<Ract />} />
-                                <Route path="html" element={<Html />} />
-                            </Routes>
-                        </>
-                    }
-                />
+                <Route path="/about" element={<Course />} />
+                <Route path="/payment" element={<PaymentStatus />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/css" element={<Css />} />
+                <Route path="/english" element={<English />} />
+                <Route path="/javascript" element={<Javascript />} />
+                <Route path="/ract" element={<Ract />} />
+                <Route path="/html" element={<Html />} />
+                <Route path="/register" element={<Registration />} />
+                <Route path="/studentprofile" element={<StudentProfile />} />
             </Routes>
         </BrowserRouter>
     );

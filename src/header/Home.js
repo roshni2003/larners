@@ -19,7 +19,7 @@ const Home = () => {
         setSearchHistory((prevHistory) => [...prevHistory, searchTerm]);
         setSearchTerm("");
       };
-    
+
 
     useEffect (()=> {
         document.body.className = theme;
@@ -145,7 +145,7 @@ const Home = () => {
                 <div className='WHY'>WHY ACADEMICHUB?</div>
                 <div className='REASON'>It is a Diverse, industry-focused coding courses, interactive learning, experienced instructors, flexible platform, affordable, recognized certifications.</div>
             </div>
-            
+
             <div className='reason'>
                 <div className='five'>
                     <img alt="" src="teach.svg" style={{height:"120px",width:"100px", marginLeft:"20px", marginTop:"10px"}} />
@@ -200,16 +200,4 @@ const Home = () => {
     )
 }
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
 

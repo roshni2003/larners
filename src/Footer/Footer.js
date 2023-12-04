@@ -8,22 +8,14 @@ const Footer = () => {
     backgroundColor: 'white',
     color: 'black',
     textAlign: 'center',
-    // padding: '10px',
     padding: '0px 20px',
-    // position: 'absolute',
-    // bottom: '0',
     width: '100%',
-    // marginTop: 'auto', 
-    position: 'fixed',
-    bottom: '0',
     
 
   };
 
   const sectionStyle = {
     display: 'flex',
-    justifyContent: 'space-around',
-    // marginTop: '10px',
   };
 
   const columnStyle = {

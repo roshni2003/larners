@@ -1,18 +1,31 @@
 body { 
-margin:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-clr);
+  margin:0px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.light-theme{
+@media only screen and (max-width: 600px) {
+  .About {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .logo {
+    /* Adjust styles for smaller screens */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Add more media queries as needed for other sections */
+}.light-theme{
   --main-heading:black;
   --para-clr: #3b3c3d;
   --btn-bg-color:#19b396;
@@ -302,6 +315,58 @@ code {
 }
 .text{
   text-align: center;
+  color: var(--main-heading);
+}
+.course{
+  height:650px ;
+  margin-top:1570px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.html{
+  height:300px ;
+  width:340px;
+  float:left;
+}
+.css{
+  height:300px ;
+  width:339px;
+  float:left;
+  margin-left:10px;
+}
+.python{
+  height:300px ;
+  width:349px;
+  float:left;
+  margin-left:10px;
+}
+.js{
+  height:300px ;
+  width:339px;
+  float:right;
+  margin-left:10px;
+  margin-top: 20px;
+}
+.c{
+  height:300px ;
+  width:340px;
+  float:right;
+  margin-left:10px;
+  margin-top: 20px;
+}
+.java{
+  height:300px ;
+  width:340px;
+  float:right;
+  margin-top: 20px;
+  
+
+}
+.link{
+  font-size: 15px;
+  margin-bottom: 3px;
+  font-weight: bold ;
+  font-family: sans-serif;
   color: var(--main-heading);
 }
 

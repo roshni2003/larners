@@ -170,20 +170,20 @@ const Feedback = () => {
 
     // };
 
-    const labelStyle = {
+    // const labelStyle = {
 
-        marginBottom: '20px',
-    };
+    //     marginBottom: '20px',
+    // };
 
-    const inputStyle = {
+    // const inputStyle = {
 
-        width: '100%',
-        padding: '10px',
-        marginBottom: '15px',
-        borderRadius: '5px',
-        border: 'none',
-        outline: 'none',
-    };
+    //     width: '100%',
+    //     padding: '10px',
+    //     marginBottom: '15px',
+    //     borderRadius: '5px',
+    //     border: 'none',
+    //     outline: 'none',
+    // };
 
     const HandleEmail = (e) => {
         setEmail(e.target.value);
@@ -221,6 +221,8 @@ const Feedback = () => {
     }
 
     return (
+<<<<<<< HEAD
+=======
         <>
 
 
@@ -269,8 +271,8 @@ const Feedback = () => {
     );
 };
 r
+>>>>>>> e6c490e645bdfc48d2b23bf5be8f15a8f87b1bf8
 
-// export default Feedback;
 <div>
 <h2>Share Your Feedback 😇</h2>
 <form>
@@ -301,6 +303,9 @@ r
 );
 };
 
+<<<<<<< HEAD
+export default Feedback;
+=======
 // import React, { useState } from 'react';
 // import Rating from '@mui/material/Rating';
 
@@ -430,3 +435,4 @@ r
 
 export default Feedback;
 
+>>>>>>> e6c490e645bdfc48d2b23bf5be8f15a8f87b1bf8

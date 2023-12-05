@@ -6,6 +6,7 @@ import Feedback from './header/Feedback';
 import Contact from './header/Contact';
 import Registration from './Registration';
 import Login from './login';
+import Home from "./header/Home";
 import ForgetPassword from './forgetpassword';
 import StudentProfile from './student/StudentProfile';
 const Routing = () => {

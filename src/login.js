@@ -1,6 +1,10 @@
-// import { useState } from "react";
-// import { Typography, Avatar, Container, Grid, Box, TextField, Stack, Button ,IconButton,InputAdornment} from '@mui/material';
-// import LockOpenIcon from '@mui/icons-material/LockOpen';
+
+import { useState } from "react";
+import { Typography, Avatar, Container, Grid, Box, TextField, Stack, Button ,IconButton,InputAdornment} from '@mui/material';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 
 
 // import { useNavigate } from 'react-router-dom';

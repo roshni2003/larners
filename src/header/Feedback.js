@@ -86,54 +86,41 @@ const Feedback = () => {
 
     return (
 
-        <div style={contactStyle}>
-              
-            <form style={formStyle}>
-              
-                <div>
-                <h2>Share Your Feedback 😇</h2>
-                    <label htmlFor="username" style={labelStyle}>
-                        Username :
-                    </label>
-                    <input type="text" autoComplete="off" name="fullname" id="fullname" style={inputStyle} onChange={HandleName} />
-                </div>
-                <div>
-                    <label htmlFor="email" style={labelStyle}>
-                        Email :
-                    </label>
-                    <input type="text" autoComplete="off" name="email" id="email" style={inputStyle} onChange={HandleEmail} value={email} />
-                </div>
-                <div>
-                    <label htmlFor="phone" style={labelStyle}>
-                        PhoneNum :
-                    </label>
-                    <input type="text" autoComplete="off" name="phone" id="phone" style={inputStyle} onChange={HandlePhone} value={phoneNum} />
-                </div>
-                <div>
-                    <label htmlFor="help" style={labelStyle}>
-                        Write your feedback here :
-                    </label>
-                    <input type="text" autoComplete="off" name="help" id="help" style={inputStyle} onChange={HandleFeedback} value={feedback} />
-                </div>
-                <div>
-                    <label type="rating" style={labelStyle}>
-                        Rate your experience:
-                    </label>
-                    <Rating
-                        name="rating"
-                        value={rating}
-                        onChange={(event, newValue) => {
-                            setRating(newValue);
-                        }}
-                    />
-                </div>
-                <button style={{fontSize:'16px', marginTop:"20px"}}onClick={handleSubmit}>Submit</button>
-                <button  style={{fontSize:'15px', marginTop:"20px"}}onClick={HandleClick}>view feedback here ➡️</button>
-            </form>
            
           
-        </div>
-    );
+//         </div>
+//     );
+// };
+
+// export default Feedback;
+<div>
+<h2>Share Your Feedback 😇</h2>
+<form>
+    <div>
+        <label htmlFor="username">Username:</label>
+        <input type="text" autoComplete="off" name="fullname" id="fullname" onChange={HandleName} />
+    </div>
+    <div>
+        <label htmlFor="email">Email:</label>
+        <input type="text" autoComplete="off" name="email" id="email" onChange={HandleEmail} value={email} />
+    </div>
+    <div>
+        <label htmlFor="phone">PhoneNum:</label>
+        <input type="text" autoComplete="off" name="phone" id="phone" onChange={HandlePhone} value={phoneNum} />
+    </div>
+    <div>
+        <label htmlFor="help">Write your feedback here:</label>
+        <input type="text" autoComplete="off" name="help" id="help" onChange={HandleFeedback} value={feedback} />
+    </div>
+    <div>
+        <label>Rate your experience:</label>
+        <Rating name="rating" value={rating} onChange={(event, newValue) => setRating(newValue)} />
+    </div>
+    <button style={{ fontSize: '16px', marginTop: '20px' }} onClick={handleSubmit}>Submit</button>
+    <button style={{ fontSize: '15px', marginTop: '20px' }} onClick={HandleClick}>View Feedback Here ➡️</button>
+</form>
+</div>
+);
 };
 
 export default Feedback;

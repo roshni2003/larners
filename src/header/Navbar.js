@@ -2,18 +2,16 @@
 import React from 'react';
 
 import { AppBar, Toolbar, Button } from '@mui/material';
-// import Courses from './Courses';
-
 
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
   const linkStyle = { color: 'black', textDecoration: 'none' };
-  const coursesStyle = { color: 'black' , marginLeft:'auto' };
+  const coursesStyle = { color: 'black', marginLeft: 'auto' };
 
   return (
     <>
-     <AppBar position="static" sx={{ backgroundColor: "white" }}>
+      <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Toolbar>
           <img
             src="logo.jpeg"
@@ -23,7 +21,7 @@ const Navbar = () => {
             />
       
           <div style={coursesStyle}>
-          
+
           </div>
           <Button color="inherit"><Link to="/Course" style={linkStyle}>Course</Link></Button>
           <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>

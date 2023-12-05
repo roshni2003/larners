@@ -4,8 +4,6 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import AppleIcon from '@mui/icons-material/Apple';
 const Home = () => {
     const [theme, setTheme]  = useState("light-theme");
-    const [searchTerm, setSearchTerm] = useState("");
-    const [searchHistory, setSearchHistory] = useState([]);
 
     const toggleTheme =()=>{
         if (theme === "dark-theme"){
@@ -14,13 +12,6 @@ const Home = () => {
             setTheme("dark-theme");   
         }
     }
-    const handleSearch = () => {
-        // Update search history and clear input
-        setSearchHistory((prevHistory) => [...prevHistory, searchTerm]);
-        setSearchTerm("");
-      };
-
-
     useEffect (()=> {
         document.body.className = theme;
     },[theme])
@@ -37,16 +28,9 @@ const Home = () => {
                 </div>
                 <div className="search">
                     <div className="bar">
-                        <input type="text" className="search-input" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
-                        <button type="button" className="search1" onClick={handleSearch}>Search</button>
-                        <div className="search-history">
-                            <h3>Search History:</h3>
-                            <ul>
-                                {searchHistory.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
-                        </div>
+                        <input type="text" className="search-input" />
+                        <button type="button" className="search1">Search</button>
+                        
                     </div>
 
                 </div>

@@ -15,7 +15,6 @@ const Routing = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Login />} />
-                <Route index element={<Home />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/reset-password" element={<ForgetPassword />} />
                 <Route path="/about" element={<Course />} />

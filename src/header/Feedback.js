@@ -139,7 +139,7 @@ import React, { useState } from 'react';
 import { Rating } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 const Feedback = () => {
-    const nevigate=useNavigate()
+    const nevigate = useNavigate()
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNum, setPhoneNum] = useState('');
@@ -147,28 +147,28 @@ const Feedback = () => {
     const [rating, setRating] = useState(0);
 
 
-    const contactStyle = {
+    // const contactStyle = {
 
-        backgroundImage: 'url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '70vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '20px',
-        color: 'white',
-        fontFamily: 'Arial, sans-serif',
-    };
+    //     backgroundImage: 'url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg")',
+    //     backgroundSize: 'cover',
+    //     backgroundPosition: 'center',
+    //     minHeight: '70vh',
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     padding: '20px',
+    //     color: 'white',
+    //     fontFamily: 'Arial, sans-serif',
+    // };
 
-    const formStyle = {
+    // const formStyle = {
 
-        width: '800px',
-        padding: '60px',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        borderRadius: '10px',
+    //     width: '800px',
+    //     padding: '60px',
+    //     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    //     borderRadius: '10px',
 
-    };
+    // };
 
     const labelStyle = {
 
@@ -221,12 +221,54 @@ const Feedback = () => {
     }
 
     return (
+        <>
 
-           
-          
-//         </div>
-//     );
-// };
+
+            <div>
+                <h2>Share Your Feedback 😇</h2>
+                <label htmlFor="username" style={labelStyle}>
+                    Username :
+                </label>
+                <input type="text" autoComplete="off" name="fullname" id="fullname" style={inputStyle} onChange={HandleName} />
+            </div>
+            <div>
+                <label htmlFor="email" style={labelStyle}>
+                    Email :
+                </label>
+                <input type="text" autoComplete="off" name="email" id="email" style={inputStyle} onChange={HandleEmail} value={email} />
+            </div>
+            <div>
+                <label htmlFor="phone" style={labelStyle}>
+                    PhoneNum :
+                </label>
+                <input type="text" autoComplete="off" name="phone" id="phone" style={inputStyle} onChange={HandlePhone} value={phoneNum} />
+            </div>
+            <div>
+                <label htmlFor="help" style={labelStyle}>
+                    Write your feedback here :
+                </label>
+                <input type="text" autoComplete="off" name="help" id="help" style={inputStyle} onChange={HandleFeedback} value={feedback} />
+            </div>
+            <div>
+                <label type="rating" style={labelStyle}>
+                    Rate your experience:
+                </label>
+                <Rating
+                    name="rating"
+                    value={rating}
+                    onChange={(event, newValue) => {
+                        setRating(newValue);
+                    }}
+                />
+            </div>
+            <button style={{ fontSize: '16px', marginTop: "20px" }} onClick={handleSubmit}>Submit</button>
+            <button style={{ fontSize: '15px', marginTop: "20px" }} onClick={HandleClick}>view feedback here ➡️</button>
+
+        </>
+
+    );
+};
+r
 
 // export default Feedback;
 <div>
@@ -259,4 +301,132 @@ const Feedback = () => {
 );
 };
 
+// import React, { useState } from 'react';
+// import Rating from '@mui/material/Rating';
+
+// const Feedback = () => {
+//     const nevigate = useNavigate()
+//     const [fullName, setFullName] = useState('');
+//     const [email, setEmail] = useState('');
+//     const [phoneNum, setPhoneNum] = useState('');
+//     const [feedback, setFeedback] = useState('');
+//     const [rating, setRating] = useState(0);
+
+//     // Event handlers
+//   const handleName = (e) => {
+//     setFullName(e.target.value);
+//   };
+
+//   const handleEmail = (e) => {
+//     setEmail(e.target.value);
+//   };
+
+//   const handlePhone = (e) => {
+//     setPhoneNum(e.target.value);
+//   };
+
+//   const handleFeedback = (e) => {
+//     setFeedback(e.target.value);
+//   };
+
+//   const handleSubmit = () => {
+//     // Implement your submit logic here
+//     console.log('Form submitted:', {
+//       fullName,
+//       email,
+//       phoneNum,
+//       feedback,
+//       rating,
+//     });
+//   };
+
+//   const handleClick = () => {
+//     // Implement your view feedback logic here
+//     console.log('View feedback clicked');
+//   };
+
+//   // Render the component
+//   return (
+//     <>
+//       <div>
+//         <h2>Share Your Feedback 😇</h2>
+//         <label htmlFor="username" style={labelStyle}>
+//           Username:
+//         </label>
+//         <input
+//           type="text"
+//           autoComplete="off"
+//           name="fullname"
+//           id="fullname"
+//           style={inputStyle}
+//           onChange={handleName}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="email" style={labelStyle}>
+//           Email:
+//         </label>
+//         <input
+//           type="text"
+//           autoComplete="off"
+//           name="email"
+//           id="email"
+//           style={inputStyle}
+//           onChange={handleEmail}
+//           value={email}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="phone" style={labelStyle}>
+//           PhoneNum:
+//         </label>
+//         <input
+//           type="text"
+//           autoComplete="off"
+//           name="phone"
+//           id="phone"
+//           style={inputStyle}
+//           onChange={handlePhone}
+//           value={phoneNum}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="help" style={labelStyle}>
+//           Write your feedback here:
+//         </label>
+//         <input
+//           type="text"
+//           autoComplete="off"
+//           name="help"
+//           id="help"
+//           style={inputStyle}
+//           onChange={handleFeedback}
+//           value={feedback}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="rating" style={labelStyle}>
+//           Rate your experience:
+//         </label>
+//         <Rating
+//           name="rating"
+//           value={rating}
+//           onChange={(event, newValue) => {
+//             setRating(newValue);
+//           }}
+//         />
+//       </div>
+//       <button style={{ fontSize: '16px', marginTop: '20px' }} onClick={handleSubmit}>
+//         Submit
+//       </button>
+//       <button style={{ fontSize: '15px', marginTop: '20px' }} onClick={handleClick}>
+//         View feedback here ➡️
+//       </button>
+//     </>
+//   );
+// };
+
+// export default Feedback;
+
 export default Feedback;
+

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import React from "react";
 import './App.css';
 import Home from "./header/Home"
@@ -13,7 +13,7 @@ function App() {
 
       <Routing />
       <Home />
-      <AddPost />
+      {/* <AddPost /> */}
       <Footer />
       <StudentProfile/>
     </>

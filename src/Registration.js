@@ -16,7 +16,7 @@ const boxStyle = {
   transform: "translate(-50%,-50%)",
   width: "40%",
   height: "80%",
-  backgroundColor: "background.paper1",  // Corrected the background color
+  backgroundColor: "background.paper1",
   boxShadow: 24,
 };
 

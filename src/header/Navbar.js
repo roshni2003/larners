@@ -19,7 +19,6 @@ const Navbar = () => {
             width="120"
             height="50"
 
-          />
           <div style={coursesStyle}>
 
           </div>

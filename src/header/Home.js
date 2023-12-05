@@ -148,38 +148,6 @@ const Home = () => {
                     <h3 className='text'>Multiple Languages</h3>
                 </div>
             </div>
-            <div className='course'>
-                <div className='html'>
-                    <img alt="" src="html.jpg" height="80%" width="100%"></img>
-                    <p className='link'>Start your HTML journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=pd_uEtbJ0Iw&list=PL8p2I9GklV44CbA1EsDKpZb8mZo8IFbIQ">Vedio Link</a>                    
-                </div>
-                <div className='css'>
-                    <img alt="" src="css.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your CSS journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=ua24185-rcw&list=PLH8iQ-rTfw2-lp7oienYPq9JT3rc-B_9p">Vedio Link</a>                    
-                </div>
-                <div className='python'>
-                    <img alt="" src="python.jpg" height="80%" width="100%"></img>
-                    <p className='link'>Start your Python journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=aqvDTCpNRek&list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME">Vedio Link</a>                    
-                </div>
-                <div className='js'>
-                    <img alt="" src="js.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your JavaScript journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=ER9SspLe4Hg&list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR">Vedio Link</a>                    
-                </div>
-                <div className='c'>
-                    <img alt="" src="c.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your C journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=2NWeucMKrLI&list=PL6gx4Cwl9DGAKIXv8Yr6nhGJ9Vlcjyymq">Vedio Link</a>                    
-                </div>
-                <div className='java'>
-                    <img alt="" src="java.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your Java journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=bm0OyhwFDuY&list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5">Vedio Link</a>                    
-                </div>
-            </div>      
         </>
     )
 }

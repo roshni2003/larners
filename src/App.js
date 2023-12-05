@@ -6,7 +6,6 @@ import Home from './header/Home';
 import Navbar from './header/Navbar';
 import PaymentStatus from './header/PaymentStatus';
 import Feedback from './header/Feedback';
-
 import About from './About/About';
 import Footer from './Footer/Footer';
 import FeedbackData from './FeedbackData';
@@ -20,7 +19,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/about" element={<About />} />
-            
             <Route path="/payment" element={<PaymentStatus />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/feedbackdata" element={<FeedbackData />} />

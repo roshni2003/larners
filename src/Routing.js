@@ -3,7 +3,7 @@ import Navbar from './header/Navbar';
 import Course from './header/Course';
 import PaymentStatus from './header/PaymentStatus';
 import Feedback from './header/Feedback';
-import Contact from './header/Contact';
+// import Contact from './header/Contact';
 import Css from './languages/Css';
 import English from './languages/English';
 import Javascript from './languages/Javacript';
@@ -12,6 +12,7 @@ import Html from './languages/Html';
 import Registration from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
+import About from "./About/About";
 
 const Routing = () => {
     return (
@@ -28,10 +29,10 @@ const Routing = () => {
                         <>
                             <Routes>
                                 <Route index element={<Course />} />
-                                <Route path="about" element={<Course />} />
+                                <Route path="about" element={<About/>} />
                                 <Route path="payment" element={<PaymentStatus />} />
                                 <Route path="feedback" element={<Feedback />} />
-                                <Route path="contact" element={<Contact />} />
+                                {/* <Route path="contact" element={<Contact />} /> */}
                                 <Route path="css" element={<Css />} />
                                 <Route path="english" element={<English />} />
                                 <Route path="javascript" element={<Javascript />} />

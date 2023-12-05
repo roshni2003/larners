@@ -21,15 +21,15 @@ const Navbar = () => {
             width="120"
             height="50"
             />
-            <h6>heyyy</h6>
+      
           <div style={coursesStyle}>
           
           </div>
           <Button color="inherit"><Link to="/Course" style={linkStyle}>Course</Link></Button>
           <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>
           <Button color="inherit"><Link to="/feedback" style={linkStyle}>Feedback</Link></Button>
-          <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>
           <Button color="inherit"><Link to="/register" style={linkStyle}>Register</Link></Button>
+          <Button color="inherit"><Link to="/About" style={linkStyle}>About</Link></Button>
           <Button color="inherit"><Link to="/studentprofile" style={linkStyle}>StudentProfile</Link></Button>
 
         </Toolbar>

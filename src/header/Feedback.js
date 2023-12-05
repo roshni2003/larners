@@ -170,20 +170,20 @@ const Feedback = () => {
 
     // };
 
-    const labelStyle = {
+    // const labelStyle = {
 
-        marginBottom: '20px',
-    };
+    //     marginBottom: '20px',
+    // };
 
-    const inputStyle = {
+    // const inputStyle = {
 
-        width: '100%',
-        padding: '10px',
-        marginBottom: '15px',
-        borderRadius: '5px',
-        border: 'none',
-        outline: 'none',
-    };
+    //     width: '100%',
+    //     padding: '10px',
+    //     marginBottom: '15px',
+    //     borderRadius: '5px',
+    //     border: 'none',
+    //     outline: 'none',
+    // };
 
     const HandleEmail = (e) => {
         setEmail(e.target.value);
@@ -222,13 +222,6 @@ const Feedback = () => {
 
     return (
 
-           
-          
-//         </div>
-//     );
-// };
-
-// export default Feedback;
 <div>
 <h2>Share Your Feedback 😇</h2>
 <form>

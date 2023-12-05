@@ -18,8 +18,8 @@ const Navbar = () => {
             alt="Logo"
             width="120"
             height="50"
-
-          <div style={coursesStyle}>
+          />
+          <div style={{coursesStyle}}>
 
           </div>
           <Button color="inherit"><Link to="/Course" style={linkStyle}>Course</Link></Button>

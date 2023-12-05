@@ -1,38 +1,4 @@
 
-
-// import { TableContainer } from '@mui/material';
-// import React, { useEffect, useState } from 'react';
-// // import { useNavigate } from 'react-router-dom';
-// // import { useLocation } from 'react-router-dom';
-
-// const FeedbackData = () => {
-//     const [data,setData]=useState([])
-//     const fetchData=()=>{
-//         fetch("http://localhost:3000/Signup").then((res)=>{
-//             return res.json()
-//         }).then((res)=>{
-//             setData(res)
-            
-//         })
-//     }
-//     useEffect(()=>{
-//         fetchData()
-//     })
-//     return (
-//         <div>
-//             <h2>Feedback Data</h2>
-            
-          
-//             {data.map((item)=>(
-//                 <p>{item.name} {item.email} {item.phone} {item.feedback} {item.rating}</p>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default FeedbackData;
-
-
 import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 

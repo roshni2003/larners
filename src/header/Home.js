@@ -145,7 +145,6 @@ const Home = () => {
                 <div className='WHY'>WHY ACADEMICHUB?</div>
                 <div className='REASON'>It is a Diverse, industry-focused coding courses, interactive learning, experienced instructors, flexible platform, affordable, recognized certifications.</div>
             </div>
-            
             <div className='reason'>
                 <div className='five'>
                     <img alt="" src="teach.svg" style={{height:"120px",width:"100px", marginLeft:"20px", marginTop:"10px"}} />
@@ -164,38 +163,6 @@ const Home = () => {
                     <h3 className='text'>Multiple Languages</h3>
                 </div>
             </div>
-            <div className='course'>
-                <div className='html'>
-                    <img alt="" src="html.jpg" height="80%" width="100%"></img>
-                    <p className='link'>Start your HTML journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=pd_uEtbJ0Iw&list=PL8p2I9GklV44CbA1EsDKpZb8mZo8IFbIQ">Vedio Link</a>                    
-                </div>
-                <div className='css'>
-                    <img alt="" src="css.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your CSS journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=ua24185-rcw&list=PLH8iQ-rTfw2-lp7oienYPq9JT3rc-B_9p">Vedio Link</a>                    
-                </div>
-                <div className='python'>
-                    <img alt="" src="python.jpg" height="80%" width="100%"></img>
-                    <p className='link'>Start your Python journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=aqvDTCpNRek&list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME">Vedio Link</a>                    
-                </div>
-                <div className='js'>
-                    <img alt="" src="js.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your JavaScript journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=ER9SspLe4Hg&list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR">Vedio Link</a>                    
-                </div>
-                <div className='c'>
-                    <img alt="" src="c.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your C journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=2NWeucMKrLI&list=PL6gx4Cwl9DGAKIXv8Yr6nhGJ9Vlcjyymq">Vedio Link</a>                    
-                </div>
-                <div className='java'>
-                    <img alt="" src="java.png" height="80%" width="100%"></img>
-                    <p className='link'>Start your Java journey from here.</p>
-                    <a href="https://www.youtube.com/watch?v=bm0OyhwFDuY&list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5">Vedio Link</a>                    
-                </div>
-            </div>      
         </>
     )
 }
@@ -213,3 +180,66 @@ export default Home;
 
 
 
+
+// import React, { useState, useEffect } from 'react';
+// import GoogleIcon from '@mui/icons-material/Google';
+// import PinterestIcon from '@mui/icons-material/Pinterest';
+// import AppleIcon from '@mui/icons-material/Apple';
+
+// const Home = () => {
+//     const [theme, setTheme] = useState("light-theme");
+//     const [searchTerm, setSearchTerm] = useState("");
+//     const [searchHistory, setSearchHistory] = useState([]);
+
+//     const toggleTheme = () => {
+//         if (theme === "dark-theme") {
+//             setTheme("light-theme");
+//         } else {
+//             setTheme("dark-theme");
+//         }
+//     }
+
+//     const handleSearch = () => {
+//         // Update search history and clear input
+//         setSearchHistory((prevHistory) => [...prevHistory, searchTerm]);
+//         setSearchTerm("");
+//     };
+
+//     useEffect(() => {
+//         document.body.className = theme;
+//     }, [theme]);
+
+//     return (
+//         <>
+//             <button href="#" className='btn' onClick={() => toggleTheme()}>Change Theme </button>
+//             <div className="about">
+//                 <div className="slogan">
+//                     <h2 className="slogan1">Unlocking Learning  <br /> Journeys and Inspiring <br /> Success Together.</h2>
+//                 </div>
+//                 <div className="paragraph">
+//                     <p className="paragraph1">Illuminating Minds Inspiring<br /> Futures: Where Knowledge Meets Innovation<br /> on our Education Platform.</p>
+//                 </div>
+//                 <div className="search">
+//                     <div className="bar">
+//                         <input type="text" className="search-input" value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}
+//                         />
+//                         <button type="button" className="search1" onClick={handleSearch}>
+//                             Search
+//                         </button>
+//                         <div className="search-history">
+//                             <h3>Search History:</h3>
+//                             <ul>
+//                                 {searchHistory.map((item, index) => (
+//                                     <li key={index}>{item}</li>
+//                                 ))}
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             {/* ... rest of the components ... */}
+//         </>
+//     );
+// }
+
+// export default Home;

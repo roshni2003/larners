@@ -1,41 +1,37 @@
+
 import React from 'react';
-import React from "react";
 import './App.css';
-import Home from "./header/Home"
-import Routing from './Routing';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './header/Home';
+import Navbar from './header/Navbar';
+import PaymentStatus from './header/PaymentStatus';
+import Feedback from './header/Feedback';
+
+import About from './About/About';
 import Footer from './Footer/Footer';
+import FeedbackData from './FeedbackData';
 import StudentProfile from './student/StudentProfile';
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/css" element={<Css />} />
-          <Route path="/english" element={<English />} />
-          <Route path="/javascript" element={<Javascript />} />
-          <Route path="/ract" element={<Ract />} />
-          <Route path="/html" element={<Html />} />
-          <Route path='/' element={<Navbar />}>
-            <Route path='about' element={<About />}></Route>
-            <Route path='payment' element={<PaymentStatus />}></Route>
-            <Route path='feedback' element={<Feedback />}></Route>
-            <Route path='contact' element={<Contact />}></Route>
-            <Route path='feedback' element={<Feedback/>}></Route>
-             {/* <Route path='/' element={<Dataview/>}></Route> */}
-             <Route path='/feedbackdata' element={<FeedbackData/>}></Route>
-             <Route index element={<Home />} />
-          </Route>
-        </Routes>
-
-      </BrowserRouter>
-      {/* <Home /> */}
-      <Footer />
-      <StudentProfile/>
-    </>
+    <BrowserRouter>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div style={{ flex: 1 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/about" element={<About />} />
+            
+            <Route path="/payment" element={<PaymentStatus />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/feedbackdata" element={<FeedbackData />} />
+            <Route path="/student-profile" element={<StudentProfile />} />
+            <Route index element={<Home />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
- 

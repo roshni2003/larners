@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Alert } from '@mui/material';
 
@@ -98,5 +95,4 @@ const StudentProfile = () => {
     </div>
   );
 };
-
 export default StudentProfile;

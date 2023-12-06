@@ -13,6 +13,7 @@ import Navbar from './header/Navbar';
 import Login from './login';
 // import ForgetPassword from './forgetpassword';
 import StudentProfile from './student/StudentProfile';
+import ChangePassword from './student/ChangePassword';
 const Routing = () => {
     return (
         <BrowserRouter>
@@ -33,6 +34,8 @@ const Routing = () => {
                 <Route path="/html" element={<Html />} />
                 <Route path="/register" element={<Registration />} /> */}
                 <Route path="/studentprofile" element={<StudentProfile />} />
+                <Route path="/changepassword" element={< ChangePassword/>}/>
+                
             </Routes>
         </BrowserRouter>
     );

@@ -25,7 +25,7 @@ const StudentProfile = () => {
     reader.onloadend = () => {
       setImagePreview(reader.result);
     };
-    
+
     if (file) {
       reader.readAsDataURL(file);
     } else {
@@ -42,8 +42,6 @@ const StudentProfile = () => {
     formData.append('stuName', stuName);
     formData.append('stuOcc', stuOcc);
     formData.append('stuImg', stuImg);
-
-
 
     console.log({
       stuId,

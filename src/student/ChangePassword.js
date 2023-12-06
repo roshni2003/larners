@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AdminProfile = () => {
   const [adminEmail, setAdminEmail] = useState('');
   const [adminPass, setAdminPass] = useState('');
   const [passmsg, setPassmsg] = useState('');
+
+  useEffect(()=>{
+    setAdminEmail('krantiwaghmare21@navgurukul.org');
+  },[]);
 
   // Assuming you have an API endpoint for updating the admin password
   const handlePasswordUpdate = async () => {

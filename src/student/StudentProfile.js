@@ -25,7 +25,7 @@ const StudentProfile = () => {
     reader.onloadend = () => {
       setImagePreview(reader.result);
     };
-    
+
     if (file) {
       reader.readAsDataURL(file);
     } else {

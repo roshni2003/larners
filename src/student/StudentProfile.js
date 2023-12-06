@@ -21,7 +21,6 @@ const StudentProfile = () => {
     const file = e.target.files[0];
     setStuImg(file);
 
-
     const reader = new FileReader();
     reader.onloadend = () => {
       setImagePreview(reader.result);
@@ -42,8 +41,6 @@ const StudentProfile = () => {
     formData.append('stuName', stuName);
     formData.append('stuOcc', stuOcc);
     formData.append('stuImg', stuImg);
-
-
 
     console.log({
       stuId,

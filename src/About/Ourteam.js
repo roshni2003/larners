@@ -1,6 +1,6 @@
 const Ourteam=()=>{
     return(
-        <div>hii</div>
+        <div>heloo</div>
     )
 }
 export default Ourteam;

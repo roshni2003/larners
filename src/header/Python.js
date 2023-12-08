@@ -1,57 +1,85 @@
-import React from 'react';
-import { Paper, Typography, List, ListItem, ListItemText } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Container, Grid, Card, CardContent, CardActions, Button } from '@mui/material';
 
-const Python = () => {
+const containerStyle = {
+  backgroundColor: '',
+  border: '1px solid #ccc',
+  padding: '20px',
+  textAlign: 'center', 
+};
+
+function Python() {
+  const [courses, setCourses] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const fetchData = () => {
+    fetch(' http://localhost:3000/pythonCourses')
+      .then((res) => res.json())
+      .then((res) => setCourses(res))
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
+
+  useEffect(() => {
+    if (courses.length === 0) {
+      fetchData();
+    }
+  }, [courses]);
+
+  const handleViewDetails = (course) => {
+    setSelectedCourse(course);
+  };
+
   return (
-    <Paper elevation={3} style={{ padding: '20px', margin: '20px' }}>
-      <Typography variant="h4" gutterBottom style={{ color: '#333' }}>
-        Overview of Python
-      </Typography>
-
-      <section style={{ marginBottom: '20px' }}>
-        <Typography variant="h5" gutterBottom style={{ color: '#555' }}>
-          What is Python?
-        </Typography>
-        <Typography paragraph style={{ color: '#777' }}>
-          Python is a high-level, interpreted programming language known for its simplicity and readability.
-          It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
-        </Typography>
-      </section>
-
-      <section style={{ marginBottom: '20px' }}>
-        <Typography variant="h5" gutterBottom style={{ color: '#555' }}>
-          Key Features
-        </Typography>
-        <List>
-          <ListItem>
-            <ListItemText primary="Readability: Python emphasizes code readability with its clean and easy-to-understand syntax." />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Versatility: Python is versatile and used in various domains, including web development, data science, machine learning, scripting, and more." />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Community: Python has a large and active community of developers, contributing to its ecosystem with libraries and frameworks." />
-          </ListItem>
-        </List>
-      </section>
-
-      <Typography variant="h4" gutterBottom style={{ color: '#333' }}>
-        History of Python
-      </Typography>
-
-      <section style={{ marginBottom: '20px' }}>
-        <Typography variant="h5" gutterBottom style={{ color: '#555' }}>
-          Creation and Development
-        </Typography>
-        <Typography paragraph style={{ color: '#777' }}>
-          Python was created by Guido van Rossum in the late 1980s. The first official Python release, Python 0.9.0, was in 1991.
-        </Typography>
-      </section>
-
-      {/* Include additional sections for Python 2 vs. Python 3, Python Software Foundation, Popularity and Adoption, Major Releases, Community and Ecosystem */}
-
-    </Paper>
+    <Container style={containerStyle}>
+      <h4>Python Courses</h4>
+      {!selectedCourse ? (
+        <Grid container spacing={2}>
+          {courses.map((course) => (
+            <Grid item key={course.id} xs={400} md={200} lg={41}>
+              <Card>
+                <img
+                  src={course.imageUrl}
+                  alt={course.title}
+                  style={{ width: '170%', height: 'auto' }}
+                />
+                <CardContent>
+                 
+                  <p> <b>Instructor: {course.instructor}</b></p>
+                  <p><b>Duration: {course.duration}</b></p>
+                  <p><b>Description: {course.description}</b></p>
+                </CardContent>
+                <CardActions>
+                  <Button onClick={() => handleViewDetails(course)}>
+                    View Details
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
+        <div>
+          <h5>{selectedCourse.title} - Details</h5>
+          {selectedCourse.courseTopics.map((topic, index) => (
+            <div key={index}>
+             <p sx={{ width: '50%', height: 'auto' }}><b>Week: {topic.topic}</b></p>
+              <img
+                src={topic.imageUrl}
+                alt={`Week ${topic.week}`}
+                style={{ width: '50%', height: 'auto' }}
+              />
+              <p><a href={topic.videoUrl} target="_blank" rel="noopener noreferrer">
+                Watch Video
+              </a></p>
+            </div>
+          ))}
+          <Button onClick={() => setSelectedCourse(null)}>Go Back</Button>
+        </div>
+      )}
+    </Container>
   );
-};  
+}
 
 export default Python;

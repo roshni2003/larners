@@ -1,23 +1,17 @@
-
 import React from 'react';
-import './App.css';
-import Routing from './Routing'
-import Home from './header/Home';
-import StudentProfile from './student/StudentProfile';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Course from './header/Course';
 import Footer from './Footer/Footer';
 
 function App() {
   return (
-
-    <>
-
-      <Routing />
-      <Home />
-      <Footer />
-      <StudentProfile/>
-      <Footer />
-    </>
-
+  <>
+    <Course/>
+  
+  <Footer />
+  </>
+      
+   
   );
 }
 

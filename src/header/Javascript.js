@@ -1,56 +1,85 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Grid, Card, CardContent, CardActions, Button } from '@mui/material';
 
-const Javascript = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const containerStyle = {
+  backgroundColor: '',
+  border: '1px solid #ccc',
+  padding: '20px',
+  textAlign: 'center', 
+};
+
+function Javascript() {
+  const [courses, setCourses] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const fetchData = () => {
+    fetch('http://localhost:3000/javascriptCourses')
+      .then((res) => res.json())
+      .then((res) => setCourses(res))
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/courses');
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+    if (courses.length === 0) {
+      fetchData();
+    }
+  }, [courses]);
 
-        const contentType = response.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-          throw new Error('Invalid response format. Expected JSON.');
-        }
-
-        const result = await response.json();
-        console.log('Data:', result.courses);
-        setData(result.courses);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const handleViewDetails = (course) => {
+    setSelectedCourse(course);
+  };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', backgroundColor: '#f0f0f0' }}>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-      {data && (
+    <Container style={containerStyle}>
+      <h4>Javascript Courses</h4>
+      {!selectedCourse ? (
+        <Grid container spacing={2}>
+          {courses.map((course) => (
+            <Grid item key={course.id} xs={400} md={200} lg={41}>
+              <Card>
+                <img
+                  src={course.imageUrl}
+                  alt={course.title}
+                  style={{ width: '170%', height: 'auto' }}
+                />
+                <CardContent>
+                  <p><b>{course.title}</b></p>
+                  <p> <b>Instructor: {course.instructor}</b></p>
+                  <p><b>Duration: {course.duration}</b></p>
+                  <p><b>Description: {course.description}</b></p>
+                </CardContent>
+                <CardActions>
+                  <Button onClick={() => handleViewDetails(course)}>
+                    View Details
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
         <div>
-          <ul>
-            {data.map((course) => (
-              <li key={course.id}>
-                <h1>{course.name}</h1>
-                {/* Render other details of the course */}
-              </li>
-            ))}
-          </ul>
+          <h5>{selectedCourse.title} - Details</h5>
+          {selectedCourse.courseTopics.map((topic, index) => (
+            <div key={index}>
+             <p sx={{ width: '50%', height: 'auto' }}><b>Week: {topic.topic}</b></p>
+              <img
+                src={topic.imageUrl}
+                alt={`Week ${topic.week}`}
+                style={{ width: '50%', height: 'auto' }}
+              />
+              <p><a href={topic.videoUrl} target="_blank" rel="noopener noreferrer">
+                Watch Video
+              </a></p>
+            </div>
+          ))}
+          <Button onClick={() => setSelectedCourse(null)}>Go Back</Button>
         </div>
       )}
-    </div>
+    </Container>
   );
-};
+}
 
 export default Javascript;

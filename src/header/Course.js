@@ -39,25 +39,25 @@ const Course = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose} style={{ backgroundColor: '#81c784' }}>
+          <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose} >
             <ListItemIcon>
               <CodeIcon />
             </ListItemIcon>
             Javascript
           </MenuItem>
-          <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose} style={{ backgroundColor: '#ffb74d' }}>
+          <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose} >
             <ListItemIcon>
               <ComputerIcon />
             </ListItemIcon>
             C++
           </MenuItem>
-          <MenuItem component={Link} to="/Cource/Python" onClick={handleClose} style={{ backgroundColor: '#9575cd' }}>
+          <MenuItem component={Link} to="/Cource/Python" onClick={handleClose} >
             <ListItemIcon>
               <LanguageIcon />
             </ListItemIcon>
             Python
           </MenuItem>
-          <MenuItem component={Link} to="/Cource/English" onClick={handleClose} style={{ backgroundColor: '#ff8a65' }}>
+          <MenuItem component={Link} to="/Cource/English" onClick={handleClose} >
             <ListItemIcon>
               <SchoolIcon />
             </ListItemIcon>

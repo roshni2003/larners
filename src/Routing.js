@@ -24,7 +24,7 @@ const Routing = () => {
                         <>
                             <Routes>
                                 <Route index element={<Course />} />
-                                <Route path="about" element={<Course />} />
+                                <Route path="Course" element={<Course />} />
                                 <Route path="payment" element={<PaymentStatus />} />
                                 <Route path="feedback" element={<Feedback />} />
                                 <Route path="contact" element={<Contact />} />

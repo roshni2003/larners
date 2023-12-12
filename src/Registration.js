@@ -123,7 +123,6 @@
 //       </Box>
 //     </Grid>
 //   );
-// };
 
 // export default Registration;
 

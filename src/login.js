@@ -1,19 +1,15 @@
+
 import { useState } from "react";
 import { Typography, Avatar, Container, Grid, Box, TextField, Stack, Button ,IconButton,InputAdornment} from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-
+//import firebase from 'firebase/app';
+import 'firebase/auth';
 
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "./firebase";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-
-// // import { useNavigate } from 'react-router-dom';
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-// import { app } from "./firebase";
-// import VisibilityIcon from "@mui/icons-material/Visibility";
-// import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const backgroundImage = 'https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg';
 

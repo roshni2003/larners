@@ -1,26 +1,26 @@
+
 import React from 'react';
 
 import './App.css';
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./header/Home"
-import AddPost from './AddPost';
-import Routing from './Routing';
-import Footer from './Footer/Footer';
+import Routing from './Routing'
+import Home from './header/Home';
 import StudentProfile from './student/StudentProfile';
-
+import Footer from './Footer/Footer';
 
 function App() {
   return (
+
     <>
+
       <Routing />
       <Home />
-      <AddPost />
       <Footer />
       <StudentProfile/>
+      <Footer />
     </>
+
   );
 }
 
-export default App;
  
+export default App;

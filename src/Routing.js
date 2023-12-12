@@ -7,31 +7,21 @@ import Contact from './header/Contact';
 import Registration from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
-
+import StudentProfile from './student/StudentProfile';
 const Routing = () => {
     return (
         <BrowserRouter>
-            <Navbar/>
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/reset-password" element={<ForgetPassword />} />
-
-                <Route
-                    path="/"
-                    element={
-                        <>
-                            <Routes>
-                                <Route index element={<Course />} />
-                                <Route path="about" element={<Course />} />
-                                <Route path="payment" element={<PaymentStatus />} />
-                                <Route path="feedback" element={<Feedback />} />
-                                <Route path="contact" element={<Contact />} />
-                                
-                            </Routes>
-                        </>
-                    }
-                />
+                <Route path="/about" element={<Course />} />
+                <Route path="/payment" element={<PaymentStatus />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/register" element={<Registration />} />
+                <Route path="/studentprofile" element={<StudentProfile />} />
             </Routes>
         </BrowserRouter>
     );

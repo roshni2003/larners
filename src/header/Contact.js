@@ -1,6 +1,6 @@
-const Contact=()=>{
-  return(
-    <div>hey im contact</div>
-  )
+const Contact =()=>{
+    return(
+        <h1>hello world!</h1>
+    )
 }
 export default Contact;

@@ -1,7 +1,10 @@
-import React from "react";
-const PaymentStatus=()=>{
-    return(
-        <div>payment</div>
-    )
-}
-export  default PaymentStatus;
+const PaymentStatus = () => {
+  
+  return (
+    <>
+        <h1>hello world!</h1>
+    </>
+      );
+};
+
+export default PaymentStatus;

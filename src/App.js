@@ -1,32 +1,24 @@
+
 import React from 'react';
-
 import './App.css';
-import Routing from './Routing';
-import Course from './header/Course'
-
+import Routing from './Routing'
+import Home from './header/Home';
 import StudentProfile from './student/StudentProfile';
-import Home from "./header/Home";
-
-import Footer from './Footer/Footer'; 
-import AddPost from './AddPost';
-
+import Footer from './Footer/Footer';
 
 function App() {
   return (
+
     <>
-     
-     <Routing />
+
+      <Routing />
       <Home />
-      <AddPost />
       <Footer />
-      <Course/>
-
       <StudentProfile/>
-
+      <Footer />
     </>
+
   );
 }
 
 export default App;
-
-

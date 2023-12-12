@@ -5,13 +5,15 @@
       "email": "neha20navgrukul",
       "phone": "322424242",
       "feedback": "i am student",
-      "id": 65
+      "id": 65,
+      "rating": 5
     },
     {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
+      "name": "alpana chavan",
+      "email": "alpanachavan@navgurukul.org",
+      "phone": "12345678",
+      "feedback": "its good ",
+      "rating": 5,
       "id": 66
     },
     {
@@ -19,70 +21,32 @@
       "email": "",
       "phone": "",
       "feedback": "",
+      "rating": 4,
       "id": 67
     },
     {
-      "name": "ashu",
-      "email": "ashu",
+      "name": "",
+      "email": "",
       "phone": "",
       "feedback": "",
+      "rating": 0,
       "id": 68
     },
     {
-      "name": "",
-      "email": "ashu@gmail.com",
-      "phone": "12345678",
-      "feedback": "give me more info",
+      "name": "alpana chavan",
+      "email": "alpana@gmail.com",
+      "phone": "1234567890",
+      "feedback": "it too good ",
+      "rating": 4,
       "id": 69
     },
     {
-      "name": "appu",
-      "email": "aapu@navgurukul.org",
-      "phone": "9890422712",
-      "feedback": "correct some question",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "feedback": "",
+      "rating": 0,
       "id": 70
-    },
-    {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "id": 71
-    },
-    {
-      "name": "alpanachavan",
-      "email": "alpanachavan@navgurukul.org",
-      "phone": "0908987544567",
-      "feedback": "good job",
-      "id": 72
-    },
-    {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "id": 73
-    },
-    {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "id": 74
-    },
-    {
-      "name": "aapi ",
-      "email": "wertyuiopojhgfds",
-      "phone": "qwertyuiokjhgfds",
-      "feedback": "zxcvbnmkiuytr",
-      "id": 75
-    },
-    {
-      "name": "aashi",
-      "email": "ashigupta ",
-      "phone": "34567",
-      "feedback": "best ever",
-      "id": 76
     }
   ]
 }

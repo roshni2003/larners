@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { MenuItem, Menu, Button, ListItemIcon } from '@mui/material';
-import CodeIcon from '@mui/icons-material/Code';
-import ComputerIcon from '@mui/icons-material/Computer';
-import LanguageIcon from '@mui/icons-material/Language';
-import SchoolIcon from '@mui/icons-material/School';
-=======
 import { AppBar, Toolbar, MenuItem, Menu, Button } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
->>>>>>> 820ebdcf9c167d20d48b1ca778e9b431da30882e
 
 import Javascript from './Javascript';
 import Cplush from './Cplush';

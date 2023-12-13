@@ -12,13 +12,12 @@ const Home = () => {
     useEffect(() => {
         document.body.className = theme;
     }, [theme]);
+    localStorage.removeItem('searchHistory');
+    const storedHistory = localStorage.getItem('searchHistory');
+    if (storedHistory) {
+        setSearchHistory(JSON.parse(storedHistory));
+    }
 
-    useEffect(() => {
-        const storedHistory = localStorage.getItem('searchHistory');
-        if (storedHistory) {
-            setSearchHistory(JSON.parse(storedHistory));
-        }
-    }, []);
 
     const saveSearchHistory = (term) => {
         const updatedHistory = [...searchHistory, term];
@@ -48,12 +47,14 @@ const Home = () => {
         setSuggestions([]);
     };
 
+
     return (
         <>
-             <button href="#" className='btn' onClick={() => setTheme((prevTheme) => (prevTheme === "dark-theme" ? "light-theme" : "dark-theme"))}>
+            <button href="#" className='btn' onClick={() => setTheme((prevTheme) => (prevTheme === "dark-theme" ? "light-theme" : "dark-theme"))}>
                 Change Theme
             </button>
-            <div className="about">                <div className="slogan">
+            <div className="about">
+                <div className="slogan">
                     <h2 className="slogan1">Unlocking Learning  <br /> Journeys and Inspiring <br /> Success Together.</h2>
                 </div>
                 <div className="paragraph">

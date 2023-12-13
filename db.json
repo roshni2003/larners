@@ -25,6 +25,14 @@
       "id": 67
     },
     {
+<<<<<<< HEAD
+      "name": "ncd",
+      "email": "ncdnc",
+      "phone": "23456",
+      "feedback": "fdusfy",
+      "rating": 5,
+      "id": 68
+=======
       "name": "",
       "email": "",
       "phone": "",
@@ -47,6 +55,7 @@
       "feedback": "",
       "rating": 0,
       "id": 70
+>>>>>>> 4ac5ba55ac0d192f1c1305ed257faa02119a977d
     }
   ]
 }

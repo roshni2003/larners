@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {MenuItem, Menu, Button } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+=======
+import { AppBar, Toolbar, MenuItem, Menu, Button, ListItemIcon } from '@mui/material';
+import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import CodeIcon from '@mui/icons-material/Code';
+import ComputerIcon from '@mui/icons-material/Computer';
+import LanguageIcon from '@mui/icons-material/Language';
+import SchoolIcon from '@mui/icons-material/School';
+>>>>>>> 5350aac81aad05388ef73506f9fc5fe767d82e7e
 
 import Javascript from './Javascript';
 import Cplush from './Cplush';
@@ -19,7 +28,7 @@ const Course = () => {
   };
 
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <Button
           aria-controls="language-menu"
@@ -35,6 +44,7 @@ const Course = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
+<<<<<<< HEAD
           <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose} >
             Javascript
           </MenuItem>
@@ -45,6 +55,30 @@ const Course = () => {
             Python
           </MenuItem>
           <MenuItem component={Link} to="/Cource/English" onClick={handleClose} >
+=======
+          <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose}>
+            <ListItemIcon>
+              <CodeIcon />
+            </ListItemIcon>
+            Javascript
+          </MenuItem>
+          <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose}>
+            <ListItemIcon>
+              <ComputerIcon />
+            </ListItemIcon>
+            C++
+          </MenuItem>
+          <MenuItem component={Link} to="/Cource/Python" onClick={handleClose}>
+            <ListItemIcon>
+              <LanguageIcon />
+            </ListItemIcon>
+            Python
+          </MenuItem>
+          <MenuItem component={Link} to="/Cource/English" onClick={handleClose}>
+            <ListItemIcon>
+              <SchoolIcon />
+            </ListItemIcon>
+>>>>>>> 5350aac81aad05388ef73506f9fc5fe767d82e7e
             English
           </MenuItem>
         </Menu>
@@ -56,7 +90,7 @@ const Course = () => {
           <Route path="/Cource/English/*" element={<English />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 

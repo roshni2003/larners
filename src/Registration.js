@@ -56,7 +56,7 @@ const Registration = () => {
   };
 
   return (
-    <Grid container sx={{ backgroundimage: url(${backgroundImage}), backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', height: '100vh', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
+    <Grid container sx={{ backgroundimage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', height: '100vh', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} TransitionComponent={TransitionLeft} anchorOrigin={{ vertical, horizontal }}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>Failed Enter correct username and password,</Alert>
       </Snackbar>

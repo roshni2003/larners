@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, MenuItem, Menu, Button } from '@mui/material';
+import {MenuItem, Menu, Button } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 import Javascript from './Javascript';
@@ -36,27 +36,15 @@ const Course = () => {
           onClose={handleClose}
         >
           <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose} >
-            <ListItemIcon>
-              <CodeIcon />
-            </ListItemIcon>
             Javascript
           </MenuItem>
           <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose} >
-            <ListItemIcon>
-              <ComputerIcon />
-            </ListItemIcon>
             C++
           </MenuItem>
           <MenuItem component={Link} to="/Cource/Python" onClick={handleClose} >
-            <ListItemIcon>
-              <LanguageIcon />
-            </ListItemIcon>
             Python
           </MenuItem>
           <MenuItem component={Link} to="/Cource/English" onClick={handleClose} >
-            <ListItemIcon>
-              <SchoolIcon />
-            </ListItemIcon>
             English
           </MenuItem>
         </Menu>

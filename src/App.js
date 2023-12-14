@@ -9,11 +9,7 @@ function App() {
   return (
 
     <>
-
       <Routing />
-      <Home />
-      <StudentProfile/>
-      <Footer />
     </>
 
   );

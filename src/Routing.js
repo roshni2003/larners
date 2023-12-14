@@ -29,8 +29,6 @@ const Routing = () => {
                 <Route path="/studentprofile" element={<StudentProfile />} />
 
             </Routes>
-            
-            {/* <StudentProfile /> */}
             <Footer />
         </BrowserRouter>
     );

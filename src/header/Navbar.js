@@ -1,13 +1,12 @@
 
 import React from 'react';
-
+import {Grid} from '@mui/material';
 import { AppBar, Toolbar, Button } from '@mui/material';
-
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
   const linkStyle = { color: 'black', textDecoration: 'none' };
-  const coursesStyle = { color: 'black', marginLeft: 'auto' };
+  // const coursesStyle = { color: 'black', marginLeft: '1000px' };
 
   return (
     <>

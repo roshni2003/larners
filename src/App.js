@@ -7,9 +7,7 @@ import Home from './header/Home';
 function App() {
   return (
     <>
-      <Course/>
-      <Footer />
-      <Home/>
+      <Routing />
     </>
   );
 }

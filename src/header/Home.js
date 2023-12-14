@@ -240,3 +240,123 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { Grid, Box } from '@mui/material';
+// import GoogleIcon from '@mui/icons-material/Google';
+// import PinterestIcon from '@mui/icons-material/Pinterest';
+// import AppleIcon from '@mui/icons-material/Apple';
+
+// const Home = () => {
+//   const [theme, setTheme] = useState("light-theme");
+//   const [input, setInput] = useState("");
+//   const [suggestions, setSuggestions] = useState([]);
+//   const [searchHistory, setSearchHistory] = useState([]);
+
+//   useEffect(() => {
+//     document.body.className = theme;
+//   }, [theme]);
+
+//   localStorage.removeItem('searchHistory');
+//   const storedHistory = localStorage.getItem('searchHistory');
+//   if (storedHistory) {
+//     setSearchHistory(JSON.parse(storedHistory));
+//   }
+
+//   const saveSearchHistory = (term) => {
+//     const updatedHistory = [...searchHistory, term];
+//     setSearchHistory(updatedHistory);
+//     localStorage.setItem('searchHistory', JSON.stringify(updatedHistory));
+//   };
+
+//   const handleInputChange = (e) => {
+//     const inputValue = e.target.value;
+//     setInput(inputValue);
+//     const filteredSuggestions = [
+//       'Html',
+//       'Css',
+//       'Python',
+//       'Javascript',
+//       'C',
+//       'Java'
+//     ].filter((suggestion) => suggestion.toLowerCase().includes(inputValue.toLowerCase()));
+
+//     setSuggestions(filteredSuggestions);
+//   };
+
+//   const handleSelectSuggestion = (suggestion) => {
+//     console.log(`Selected suggestion: ${suggestion}`);
+//     saveSearchHistory(suggestion);
+//     setInput("");
+//     setSuggestions([]);
+//   };
+
+//   return (
+//     <>
+//       {/* Change Theme Button */}
+//       <button href="#" className='btn' onClick={() => setTheme((prevTheme) => (prevTheme === "dark-theme" ? "light-theme" : "dark-theme"))}>
+//         Change Theme
+//       </button>
+
+//       {/* Main Content */}
+//       <Grid container spacing={3}>
+//         <Grid item xs={6}>
+//           {/* About Section */}
+//           <Box>
+//             {/* ... (Your existing about section code) */}
+//           </Box>
+//         </Grid>
+
+//         <Grid item xs={6}>
+//           {/* Logo Section */}
+//           <Box>
+//             {/* ... (Your existing logo section code) */}
+//           </Box>
+//         </Grid>
+
+//         {/* Add more Grid items for other sections as needed */}
+
+//       </Grid>
+
+//       {/* Course Section */}
+//       <Grid container spacing={3}>
+//         <Grid item xs={4}>
+//           {/* HTML Course */}
+//           <Box>
+//             {/* ... (Your existing HTML course section code) */}
+//           </Box>
+//         </Grid>
+
+//         <Grid item xs={4}>
+//           {/* CSS Course */}
+//           <Box>
+//             {/* ... (Your existing CSS course section code) */}
+//           </Box>
+//         </Grid>
+
+//         <Grid item xs={4}>
+//           {/* Python Course */}
+//           <Box>
+//             {/* ... (Your existing Python course section code) */}
+//           </Box>
+//         </Grid>
+
+//         {/* Add more Grid items for other courses as needed */}
+
+//       </Grid>
+//     </>
+//   );
+// };
+
+// export default Home;

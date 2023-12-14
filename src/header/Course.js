@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import {MenuItem, Menu, Button } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+=======
 import { AppBar, Toolbar, MenuItem, Menu, Button, ListItemIcon } from '@mui/material';
 import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import CodeIcon from '@mui/icons-material/Code';
 import ComputerIcon from '@mui/icons-material/Computer';
 import LanguageIcon from '@mui/icons-material/Language';
 import SchoolIcon from '@mui/icons-material/School';
+>>>>>>> 5350aac81aad05388ef73506f9fc5fe767d82e7e
 
 import Javascript from './Javascript';
 import Cplush from './Cplush';
@@ -39,6 +44,18 @@ const Course = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
+<<<<<<< HEAD
+          <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose} >
+            Javascript
+          </MenuItem>
+          <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose} >
+            C++
+          </MenuItem>
+          <MenuItem component={Link} to="/Cource/Python" onClick={handleClose} >
+            Python
+          </MenuItem>
+          <MenuItem component={Link} to="/Cource/English" onClick={handleClose} >
+=======
           <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose}>
             <ListItemIcon>
               <CodeIcon />
@@ -61,6 +78,7 @@ const Course = () => {
             <ListItemIcon>
               <SchoolIcon />
             </ListItemIcon>
+>>>>>>> 5350aac81aad05388ef73506f9fc5fe767d82e7e
             English
           </MenuItem>
         </Menu>

@@ -9,11 +9,6 @@ const Footer = () => {
     color: 'black',
     textAlign: 'center',
     padding: '0px 20px',
-    width: '100%',
-    position: 'fixed',
-    bottom: 0,
-    
-
   };
 
   const sectionStyle = {
@@ -25,37 +20,38 @@ const Footer = () => {
     padding: '10px',
   };
   const iconStyle = {
-    fontSize: '1.5rem', 
-    margin: '0 10px', 
+    fontSize: '1.5rem',
+    margin: '0 10px',
     color: '#3f51b5',
   };
+   return (
+    <div>
+      <div style={footerStyle}>
+        <div className="footer-content">
+          <div style={sectionStyle}>
+            <div style={columnStyle}>
+              <h3>ACADEMICHUB</h3>
+              <p>Follow us on social media
+                <div className="social-icons">
+                  <Facebook style={iconStyle} />
+                  <Twitter style={iconStyle} />
+                  <Instagram style={iconStyle} />
 
-  return (
-    <div style={footerStyle}>
-      <div className="footer-content">
-        <div style={sectionStyle}>
-          <div style={columnStyle}>
-            <h3>ACADEMICHUB</h3>
-            <p>Follow us on social media
-            <div className="social-icons">
-        <Facebook style={iconStyle} />
-        <Twitter style={iconStyle} />
-        <Instagram style={iconStyle} />
-        
-      </div>
-            </p>
+                </div>
+              </p>
 
-          </div>
-          <div style={columnStyle}>
-            <h3>Information</h3>
-            <p>Privacy policy</p>
-            <p>Membership</p>
-            <p>Purchases Guide</p>
-            <p>Terms of service</p>
-          </div>
-          <div style={columnStyle}>
-            <h3>Get In Touch</h3>
-            <p>Navgurukul Social Welfare</p>
+            </div>
+            <div style={columnStyle}>
+              <h3>Information</h3>
+              <p>Privacy policy</p>
+              <p>Membership</p>
+              <p>Purchases Guide</p>
+              <p>Terms of service</p>
+            </div>
+            <div style={columnStyle}>
+              <h3>Get In Touch</h3>
+              <p>Navgurukul Social Welfare</p>
+            </div>
           </div>
         </div>
       </div>

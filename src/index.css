@@ -123,13 +123,11 @@ code {
 }
 .girl{
   height: 400px;
-  width: 400px;
+  width: 200px;
   margin-top: 100px;
   float: right;
-  margin-right: 300px;
-}
-.girl1{
-  margin-right: 60px;
+  position: relative;
+  left: 200px;
 }
 .logo{
   height: 35px;
@@ -197,7 +195,7 @@ code {
   width: 550px;
   margin-top: 100px;
   float: right;
-  margin-right: 200px;
+  margin-left: 100px;
 }
 .About{
   height: 20px;
@@ -273,8 +271,8 @@ code {
   height: 450px;
   width: 400px;
   float: right;
-  margin-right: 300px;
   margin-top: 50px;
+  margin-left: 100px;
 }
 .WHY{
   height: 30px;
@@ -339,15 +337,14 @@ code {
 }
 .course{
   height:650px ;
-  margin-top:1570px;
   margin-left: 200px;
   margin-right: 200px;
+  margin-top: 50px;
 }
 .html{
   height:300px ;
   width:340px;
   float:left;
-  margin-top: 14px ;
 }
 .css{
   height:300px ;

@@ -75,7 +75,9 @@ const Wrapper = styled("section")`
 
 const Contact = () => {
   return (
+
     <>
+
       <Wrapper>
         <div className="container">
           <div className="profile">
@@ -96,6 +98,7 @@ const Contact = () => {
               className="contact-inputs"
             >
               <h1>Contact here...👇</h1>
+
               <input
                 type="text"
                 name="username"
@@ -111,13 +114,17 @@ const Contact = () => {
                 autoComplete="off"
                 required
               />
+
               <textarea name="message" placeholder="message" cols="30" rows="6"></textarea>
               <input type="submit" value="Send" />
             </form>
           </div>
         </div>
+
       </Wrapper>
+
     </>
+    
   );
 };
 

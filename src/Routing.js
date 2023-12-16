@@ -3,11 +3,12 @@ import Navbar from './header/Navbar';
 import Course from './header/Course';
 import PaymentStatus from './header/PaymentStatus';
 // import Feedback from './header/Feedback';
-import Contact from './header/Contact';
+import Contact from './student/Contact';
 import Registration from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
 import StudentProfile from './student/StudentProfile';
+import UpdatePassword from "./student/UpdatePassword";
 const Routing = () => {
     return (
         <BrowserRouter>
@@ -22,6 +23,9 @@ const Routing = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Registration />} />
                 <Route path="/studentprofile" element={<StudentProfile />} />
+                <Route path="/updatepassword" element={<UpdatePassword />} />
+
+
             </Routes>
         </BrowserRouter>
     );

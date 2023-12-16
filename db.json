@@ -6,7 +6,8 @@
       "phone": "322424242",
       "feedback": "i am student",
       "id": 65,
-      "rating": 5
+      "rating": 5,
+      "password":"neha123"
     },
     {
       "name": "alpana chavan",
@@ -14,31 +15,26 @@
       "phone": "12345678",
       "feedback": "its good ",
       "rating": 5,
-      "id": 66
+      "id": 66,
+      "password":"alpana123"
     },
     {
-      "name": "",
-      "email": "",
+      "name": "kranti waghmare",
+      "email": "krantiwaghmare@navgurukul.org",
       "phone": "",
       "feedback": "",
       "rating": 4,
-      "id": 67
+      "id": 67,
+      "password":"kranti123"
     },
     {
-<<<<<<< HEAD
-      "name": "ncd",
-      "email": "ncdnc",
-      "phone": "23456",
-      "feedback": "fdusfy",
-      "rating": 5,
-      "id": 68
-=======
-      "name": "",
+
       "email": "",
       "phone": "",
       "feedback": "",
       "rating": 0,
-      "id": 68
+      "id": 68,
+      "password":"priya123"
     },
     {
       "name": "alpana chavan",
@@ -46,16 +42,16 @@
       "phone": "1234567890",
       "feedback": "it too good ",
       "rating": 4,
-      "id": 69
+      "id": 69,
+      "password":"chavan123"
     },
     {
-      "name": "",
-      "email": "",
+      "name": "roshni",
+      "email": "roshni@navgurukul.org",
       "phone": "",
       "feedback": "",
       "rating": 0,
-      "id": 70
->>>>>>> 4ac5ba55ac0d192f1c1305ed257faa02119a977d
+
     }
   ]
 }

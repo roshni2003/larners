@@ -1,67 +1,85 @@
-import React from 'react';
-import { Container, Typography, Paper } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Container, Grid, Card, CardContent, CardActions, Button } from '@mui/material';
 
-const Cplush = () => {
+const containerStyle = {
+  backgroundColor: '',
+  border: '1px solid #ccc',
+  padding: '20px',
+  textAlign: 'center', 
+};
+
+function Cplush() {
+  const [courses, setCourses] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const fetchData = () => {
+    fetch('  http://localhost:3000/Cplus')
+      .then((res) => res.json())
+      .then((res) => setCourses(res))
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
+
+  useEffect(() => {
+    if (courses.length === 0) {
+      fetchData();
+    }
+  }, [courses]);
+
+  const handleViewDetails = (course) => {
+    setSelectedCourse(course);
+  };
+
   return (
-    <Container maxWidth="md" style={styles.container}>
-      <Typography variant="h4" component="div" style={styles.moduleTitle}>
-        <b>Module 1: Introduction to Programming and C++</b>
-      </Typography>
-      <Paper elevation={3} style={styles.section}>
-        <Typography variant="h5" style={styles.heading}>
-          1.1 Overview of Programming
-        </Typography>
-        <Typography paragraph>
-          Programming is the process of designing and building executable computer code to accomplish a specific task or solve a problem.
-          It involves creating algorithms, which are step-by-step instructions that a computer can follow to perform a task.
-        </Typography>
-      </Paper>
-      <Paper elevation={3} style={styles.section}>
-        <Typography variant="h6" style={styles.heading}>
-          1.2 Introduction to C++
-        </Typography>
-        <Typography paragraph>
-          C++ is a general-purpose programming language that extends the features of the C programming language.
-          It supports object-oriented programming (OOP) and provides low-level memory manipulation features.
-          C++ is widely used for system/application software, game development, and embedded firmware.
-        </Typography>
-        <Typography variant="h6" style={styles.subHeading}>
-          1.3 Setting up the Development Environment
-        </Typography>
-        <Typography paragraph>
-          A C++ development environment includes a compiler to translate code into machine-readable instructions.
-          Popular choices include GCC and Visual Studio.
-        </Typography>
-        <Typography variant="h6" style={styles.example}>
-          Example: Hello World Program
-        </Typography>
-      </Paper>
+    <Container style={containerStyle}>
+      <h4>Javascript Courses</h4>
+      {!selectedCourse ? (
+        <Grid container spacing={2}>
+          {courses.map((course) => (
+            <Grid item key={course.id} xs={400} md={200} lg={41}>
+              <Card>
+                <img
+                  src={course.imageUrl}
+                  alt={course.title}
+                  style={{ width: '170%', height: 'auto' }}
+                />
+                <CardContent>
+                  <p><b>{course.title}</b></p>
+                  <p> <b>Instructor: {course.instructor}</b></p>
+                  <p><b>Duration: {course.duration}</b></p>
+                  <p><b>Description: {course.description}</b></p>
+                </CardContent>
+                <CardActions>
+                  <Button onClick={() => handleViewDetails(course)}>
+                    View Details
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      ) : (
+        <div>
+          <h5>{selectedCourse.title} - Details</h5>
+          {selectedCourse.courseTopics.map((topic, index) => (
+            <div key={index}>
+             <p sx={{ width: '50%', height: 'auto' }}><b>Week: {topic.topic}</b></p>
+              <img
+                src={topic.imageUrl}
+                alt={`Week ${topic.week}`}
+                style={{ width: '50%', height: 'auto' }}
+              />
+              <p><a href={topic.videoUrl} target="_blank" rel="noopener noreferrer">
+                Watch Video
+              </a></p>
+            </div>
+          ))}
+          <Button onClick={() => setSelectedCourse(null)}>Go Back</Button>
+        </div>
+      )}
     </Container>
   );
-};
-
-const styles = {
-  container: {
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-  },
-  moduleTitle: {
-    marginBottom: '20px',
-  },
-  section: {
-    marginBottom: '30px',
-    padding: '20px',
-  },
-  heading: {
-    marginBottom: '15px',
-  },
-  subHeading: {
-    marginBottom: '15px',
-  },
-  example: {
-    fontWeight: 'bold',
-    color: '#2196f3',
-  },
-};
+}
 
 export default Cplush;

@@ -28,7 +28,7 @@
       "password":"kranti123"
     },
     {
-      "name": "priya",
+
       "email": "",
       "phone": "",
       "feedback": "",
@@ -51,8 +51,7 @@
       "phone": "",
       "feedback": "",
       "rating": 0,
-      "id": 70,
-      "password":"roshni123"
+
     }
   ]
 }

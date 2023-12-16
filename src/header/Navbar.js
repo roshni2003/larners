@@ -1,37 +1,92 @@
-
 import React from 'react';
-import {Grid} from '@mui/material';
-import { AppBar, Toolbar, Button } from '@mui/material';
-import { Outlet, Link } from "react-router-dom";
+import { AppBar, Toolbar, Button, useMediaQuery, IconButton, Menu, MenuItem, Box } from '@mui/material';
+import { Link } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import AboutDropdown from '../About/AboutDropdown';
 
 const Navbar = () => {
   const linkStyle = { color: 'black', textDecoration: 'none' };
-  // const coursesStyle = { color: 'black', marginLeft: '1000px' };
+  const courses = [
+    { label: 'Course', link: '/Course' },
+    { label: 'Payment Status', link: '/payment' },
+    { label: 'Feedback', link: '/feedback' },
+    { label: 'Register', link: '/register' },
+    { label: 'Student Profile', link: '/studentprofile' }
+  ];
+
+  const isMobile = useMediaQuery('(max-width:600px)'); 
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "white" }}>
-        <Toolbar>
-          <img
-            src="logo.jpeg"
-            alt="Logo"
-            width="120"
-            height="50"
-          />
-          <div style={{coursesStyle}}>
+      <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Link to="/" style={linkStyle}>
+            <img
+              src="logo.jpeg"
+              alt="Logo"
+              width="120"
+              height="50"
+            />
+          </Link>
+          {isMobile ? (
+            <>
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                {/* About button */}
+                <Button color="inherit" sx={{ marginRight: '10px' }}>
+                  <AboutDropdown />
+                </Button>
 
-          </div>
-      
-          <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>
-          <Button color="inherit"><Link to="/feedback" style={linkStyle}>Feedback</Link></Button>
-          <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>
-          <Button color="inherit"><Link to="/register" style={linkStyle}>Register</Link></Button>
-          <Button color="inherit"><Link to="/studentprofile" style={linkStyle}>StudentProfile</Link></Button>
-          <Button color="inherit"><Link to="/Course" style={linkStyle}>Cource</Link></Button>
-
+                {/* Menu icon */}
+                <IconButton
+                  color="black"
+                  aria-label="menu"
+                  onClick={handleMenuClick}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Box>
+              {/* Menu */}
+              <Menu
+                id="navbar-menu"
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleMenuClose}
+              >
+                {courses.map((course, index) => (
+                  <MenuItem key={index} onClick={handleMenuClose}>
+                    <Link to={course.link} style={linkStyle}>
+                      {course.label}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </>
+          ) : (
+            <>
+              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+                {courses.map((course, index) => (
+                  <Button key={index} color="inherit">
+                    <Link to={course.link} style={linkStyle}>
+                      {course.label}
+                    </Link>
+                  </Button>
+                ))}
+                <AboutDropdown />
+              </Box>
+            </>
+          )}
         </Toolbar>
       </AppBar>
-      <Outlet />
     </>
   );
 };

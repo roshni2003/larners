@@ -28,63 +28,24 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: 'white' }}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Link to="/" style={linkStyle}>
-            <img
-              src="logo.jpeg"
-              alt="Logo"
-              width="120"
-              height="50"
-            />
-          </Link>
-          {isMobile ? (
-            <>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                {/* About button */}
-                <Button color="inherit" sx={{ marginRight: '10px' }}>
-                  <AboutDropdown />
-                </Button>
+      <AppBar position="static" sx={{ backgroundColor: "white" }}>
+        <Toolbar>
+          <img
+            src="logo.jpeg"
+            alt="Logo"
+            width="120"
+            height="50"
+          />
+          <div style={{coursesStyle}}>
 
-                {/* Menu icon */}
-                <IconButton
-                  color="black"
-                  aria-label="menu"
-                  onClick={handleMenuClick}
-                >
-                  <MenuIcon />
-                </IconButton>
-              </Box>
-              {/* Menu */}
-              <Menu
-                id="navbar-menu"
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={handleMenuClose}
-              >
-                {courses.map((course, index) => (
-                  <MenuItem key={index} onClick={handleMenuClose}>
-                    <Link to={course.link} style={linkStyle}>
-                      {course.label}
-                    </Link>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </>
-          ) : (
-            <>
-              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                {courses.map((course, index) => (
-                  <Button key={index} color="inherit">
-                    <Link to={course.link} style={linkStyle}>
-                      {course.label}
-                    </Link>
-                  </Button>
-                ))}
-                <AboutDropdown />
-              </Box>
-            </>
-          )}
+          </div>
+      
+          <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>
+          <Button color="inherit"><Link to="/feedback" style={linkStyle}>Feedback</Link></Button>
+          <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>
+          <Button color="inherit"><Link to="/register" style={linkStyle}>Register</Link></Button>
+          <Button color="inherit"><Link to="/studentprofile" style={linkStyle}>StudentProfile</Link></Button>
+         <Button color="inherit"><Link to="/Course" style={linkStyle}>Cource</Link></Button>
         </Toolbar>
       </AppBar>
     </>

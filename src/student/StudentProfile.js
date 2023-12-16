@@ -25,7 +25,7 @@ const StudentProfile = () => {
     reader.onloadend = () => {
       setImagePreview(reader.result);
     };
-    
+
     if (file) {
       reader.readAsDataURL(file);
     } else {
@@ -43,8 +43,6 @@ const StudentProfile = () => {
     formData.append('stuOcc', stuOcc);
     formData.append('stuImg', stuImg);
 
-
-
     console.log({
       stuId,
       stuEmail,
@@ -59,7 +57,7 @@ const StudentProfile = () => {
     setImagePreview(null);
     setPassmsg('Updated Successfully');
   };
-  
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh' }}>
       {imagePreview && (

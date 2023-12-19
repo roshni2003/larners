@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 
@@ -80,7 +79,7 @@ const OurTeam = () => {
       <Grid container spacing={3} justifyContent="center" marginTop={"100px"}>
         {teamMembers.map((member, index) => (
           <Grid item key={index}>
-            <Card variant="outlined"  sx={{ minWidth: 450, /* Adjust the minWidth value as needed */ }}>
+            <Card variant="outlined"  sx={{ minWidth: 450,  }}>
               <CardContent>
                 <img src={member.imageUrl} alt={member.name} style={{ width: '100%', height: '600px'  }} />
                 <Typography variant="h5" component="div">

@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 import { AppBar, Toolbar, Button, useMediaQuery, IconButton, Menu, MenuItem, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -14,7 +15,6 @@ const Navbar = () => {
     { label: 'Payment Status', link: '/payment' },
     { label: 'Feedback', link: '/feedback' },
     { label: 'Register', link: '/register' },
-    // { label: 'Student Profile', link: '/studentprofile' }
   ];
 
   const isMobile = useMediaQuery('(max-width:600px)'); 
@@ -68,7 +68,6 @@ const Navbar = () => {
                 ))}
               </>
             )}
-            {/* Always display PersonIcon */}
             <IconButton color="inherit">
               <Link to="/studentprofile" style={linkStyle}>
                 <PersonIcon/>

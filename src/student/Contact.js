@@ -82,12 +82,12 @@ const Contact = () => {
         <div className="container">
           <div className="profile">
             <img
-              src="Meraki.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9_PiqrY8Aj3kyUlkQrQqw9-pybdLvCPpFQ&usqp=CAU"
               alt="Profile"
             />
             <div className="profile-info">
-              <h1>Meraki</h1>
-              <p>Navgurukul ❤️</p>
+              <h1>Academic Hub</h1>
+              <p>University ❤️</p>
               <p>10K+ downloads </p>
             </div>
           </div>
@@ -111,6 +111,14 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
+                autoComplete="off"
+                required
+              />
+
+              <input
+                type="text"
+                name="phone number"
+                placeholder="phone number"
                 autoComplete="off"
                 required
               />

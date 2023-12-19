@@ -28,7 +28,6 @@ const Navbar = () => {
           <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>
           <Button color="inherit"><Link to="/register" style={linkStyle}>Register</Link></Button>
           <Button color="inherit"><Link to="/studentprofile" style={linkStyle}>StudentProfile</Link></Button>
-          <Button color="inherit"><Link to="/updatepassword" style={linkStyle}>UpdatePassword</Link></Button>
 
 
         </Toolbar>

@@ -6,7 +6,8 @@
       "phone": "322424242",
       "feedback": "i am student",
       "id": 65,
-      "rating": 5
+      "rating": 5,
+      "password":"neha123"
     },
     {
       "name": "alpana chavan",
@@ -23,7 +24,8 @@
       "phone": "1234567890",
       "feedback": "it too good ",
       "rating": 4,
-      "id": 69
+      "id": 69,
+      "password":"chavan123"
     },
     
     {

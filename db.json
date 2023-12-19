@@ -15,27 +15,9 @@
       "phone": "12345678",
       "feedback": "its good ",
       "rating": 5,
-      "id": 66,
-      "password":"alpana123"
+      "id": 66
     },
-    {
-      "name": "kranti waghmare",
-      "email": "krantiwaghmare@navgurukul.org",
-      "phone": "",
-      "feedback": "",
-      "rating": 4,
-      "id": 67,
-      "password":"kranti123"
-    },
-    {
-      "name": "priya",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "rating": 0,
-      "id": 68,
-      "password":"priya123"
-    },
+    
     {
       "name": "alpana chavan",
       "email": "alpana@gmail.com",
@@ -45,14 +27,15 @@
       "id": 69,
       "password":"chavan123"
     },
+    
     {
-      "name": "roshni",
-      "email": "roshni@navgurukul.org",
-      "phone": "",
-      "feedback": "",
-      "rating": 0,
-      "id": 70,
-      "password":"roshni123"
+      "name": "neha",
+      "email": "neha20@gmail.com",
+      "phone": "9890422712",
+      "feedback": "plz did some chages overall good",
+      "rating": 5,
+      "id": 71
     }
+    
   ]
 }

@@ -131,8 +131,7 @@ const Contact = () => {
 
       </Wrapper>
 
-    </>
-    
+    </> 
   );
 };
 

@@ -16,22 +16,7 @@
       "rating": 5,
       "id": 66
     },
-    {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "rating": 4,
-      "id": 67
-    },
-    {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "rating": 0,
-      "id": 68
-    },
+    
     {
       "name": "alpana chavan",
       "email": "alpana@gmail.com",
@@ -40,13 +25,15 @@
       "rating": 4,
       "id": 69
     },
+    
     {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "feedback": "",
-      "rating": 0,
-      "id": 70
+      "name": "neha",
+      "email": "neha20@gmail.com",
+      "phone": "9890422712",
+      "feedback": "plz did some chages overall good",
+      "rating": 5,
+      "id": 71
     }
+    
   ]
 }

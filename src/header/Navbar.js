@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { AppBar, Toolbar, Button, useMediaQuery, IconButton, Menu, MenuItem, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -17,7 +14,7 @@ const Navbar = () => {
     { label: 'Register', link: '/register' },
   ];
 
-  const isMobile = useMediaQuery('(max-width:600px)'); 
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -33,12 +30,9 @@ const Navbar = () => {
     <>
       <AppBar position="static" sx={{ backgroundColor: 'white' }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <img
-            src="logo.jpeg"
-            alt="Logo"
-            width="120"
-            height="50"
-          />
+          <Link to="/" >
+            <img src="logo.jpeg" alt="Logo" width="120" height="50" />
+          </Link>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {isMobile && (
               <>
@@ -70,7 +64,7 @@ const Navbar = () => {
             )}
             <IconButton color="inherit">
               <Link to="/studentprofile" style={linkStyle}>
-                <PersonIcon/>
+                <PersonIcon />
               </Link>
             </IconButton>
           </Box>

@@ -35,7 +35,6 @@ const Routing = () => {
                 <Route path="/register" element={<Registration />} />
                 <Route path="/studentprofile" element={<StudentProfile />} />
 
-
             </Routes>
         </BrowserRouter>
          

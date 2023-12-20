@@ -11,10 +11,10 @@ const StudentProfile = () => {
   const [passmsg, setPassmsg] = useState('');
 
   useEffect(() => {
-    setStuId('123');
-    setStuEmail('krantiwaghmare21@navgurukul.org.com');
-    setStuName('Kranti Waghmare');
-    setStuOcc('Student');
+    setStuId('');
+    setStuEmail('');
+    setStuName('');
+    setStuOcc('');
   }, []);
 
   const handleFileChange = (e) => {

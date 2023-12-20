@@ -39,26 +39,13 @@ const Routing = () => {
             </Routes>
             <Footer />
         </BrowserRouter>
-    );
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/registration" element={<Registration />} />
-        <Route path="/reset-password" element={<ForgetPassword />} />
-        <Route path="/course" element={<Course />} />
-        <Route path="/payment" element={<PaymentStatus />} />
-        <Route path="/feedback" element={<Feedback />} />
-        <Route path="/feedbackData" element={<FeedbackData />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/register" element={<Registration />} />
-        <Route path="/studentprofile" element={<StudentProfile />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
   );
 };
 
 export default Routing;
+
+
+
+
+
+

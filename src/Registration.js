@@ -113,7 +113,6 @@ const Registration = () => {
                                 </Stack>
                             </Grid>
                         </Box>
-                        {/* ... (other JSX for form fields) */}
                         <Button type="submit" variant="contained" fullWidth={true} sx={{ mt: "10px", mr: "20px", borderRadius: 28, color: "#ffffff", minWidth: "170px", backgroundColor: "blue" }}>Sign in</Button>
                         {/* ... (other JSX) */}
                     </Container>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {MenuItem, Menu, Button, ListItemIcon } from '@mui/material';
+import { MenuItem, Menu, Button, ListItemIcon } from '@mui/material';
 import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import CodeIcon from '@mui/icons-material/Code';
 import ComputerIcon from '@mui/icons-material/Computer';
@@ -66,11 +66,16 @@ const Course = () => {
         </Menu>
 
         <Routes>
-          <Route path="/Cource/Javascript/*" element={<Javascript />} />
-          <Route path="/Cource/Cplush/*" element={<Cplush />} />
-          <Route path="/Cource/Python/*" element={<Python />} />
-          <Route path="/Cource/English/*" element={<English />} />
+          <React.Suspense fallback={<div>Loading...</div>}>
+            <React.ErrorBoundary>
+              <Route path="/Cource/Javascript/*" element={<Javascript />} />
+              <Route path="/Cource/Cplush/*" element={<Cplush />} />
+              <Route path="/Cource/Python/*" element={<Python />} />
+              <Route path="/Cource/English/*" element={<English />} />
+            </React.ErrorBoundary>
+          </React.Suspense>
         </Routes>
+
       </div>
     </BrowserRouter>
   );

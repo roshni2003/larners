@@ -18,14 +18,6 @@ const Navbar = () => {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-          </div>
-          <Button color="inherit"><Link to="/Course" style={linkStyle}>Course</Link></Button>
-          <Button color="inherit"><Link to="/payment" style={linkStyle}>Payment Status</Link></Button>
-          <Button color="inherit"><Link to="/feedback" style={linkStyle}>Feedback</Link></Button>
-          <Button color="inherit"><Link to="/contact" style={linkStyle}>Contact</Link></Button>
-          <Button color="inherit"><Link to="/register" style={linkStyle}>Register</Link></Button>
-          <Button color="inherit"><Link to="/studentprofile" style={linkStyle}>StudentProfile</Link></Button>
-
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
   };

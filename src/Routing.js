@@ -35,11 +35,11 @@ const Routing = () => {
                 <Route path="/register" element={<Registration />} />
                 <Route path="/studentprofile" element={<StudentProfile />} />
 
-
             </Routes>
-            <Footer />
         </BrowserRouter>
-  );
+         
+    );
+   
 };
 
 export default Routing;

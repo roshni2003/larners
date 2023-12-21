@@ -11,8 +11,12 @@ import Login from './login';
 import ForgetPassword from './forgetpassword';
 import Home from './header/Home';
 import StudentProfile from './student/StudentProfile';
-import UpdatePassword from "./student/UpdatePassword";
+// Check file extension in the import statement
+import UpdatePassword from './student/UpdatePassword';
+
 import Footer from './Footer/Footer';
+// Check for typos in import statements and variable declarations
+
 
 const Routing = () => {
     return (

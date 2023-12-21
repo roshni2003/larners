@@ -13,7 +13,7 @@ import Home from './header/Home';
 import StudentProfile from './student/StudentProfile';
 import UpdatePassword from "./student/UpdatePassword";
 import Footer from './Footer/Footer';
-
+import Home from './header/Home';
 const Routing = () => {
     return (
         <BrowserRouter>

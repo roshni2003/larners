@@ -1,6 +1,6 @@
-
 import React from "react";
 import { styled } from "@mui/system";
+import { Typography } from "@mui/material";
 
 const Wrapper = styled("section")`
   padding: 2rem 0.5rem 0;
@@ -17,34 +17,25 @@ const Wrapper = styled("section")`
       margin-bottom: 3rem;
 
       img {
-        width: 100px; 
-        height: 100px; 
+        width: 195px;
+        height: 190px;
         border-radius: 50%;
         object-fit: cover;
       }
 
       .profile-info {
         text-align: left;
-
-        h1 {
-          margin-bottom: 0.5rem;
-        }
-
-        p {
-          margin-bottom: 0;
-        }
       }
     }
 
     .contact-form {
-      max-width: 40rem;  
+      max-width: 40rem;
       margin: auto;
 
       .contact-inputs {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
-
+        gap: 1rem;
         input[type="text"],
         input[type="email"],
         textarea {
@@ -75,20 +66,18 @@ const Wrapper = styled("section")`
 
 const Contact = () => {
   return (
-
     <>
-
       <Wrapper>
         <div className="container">
           <div className="profile">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9_PiqrY8Aj3kyUlkQrQqw9-pybdLvCPpFQ&usqp=CAU"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudhKcXMqZyX3W9hChwQTaTxgZhiVz5iSUaDpF491PsIpEDu96Ob9rbg1fclc89ord49o&usqp=CAU"
               alt="Profile"
             />
             <div className="profile-info">
-              <h1>Academic Hub</h1>
-              <p>University ❤️</p>
-              <p>10K+ downloads </p>
+              <Typography variant="h3">Academic Hub</Typography>
+              <h1>University ❤️</h1>
+              <h3>10K+ downloads </h3>
             </div>
           </div>
           <div className="contact-form">
@@ -97,7 +86,7 @@ const Contact = () => {
               method="POST"
               className="contact-inputs"
             >
-              <h1>Contact here...👇</h1>
+              <Typography variant="h4">Contact here...👇</Typography>
 
               <input
                 type="text"
@@ -123,18 +112,20 @@ const Contact = () => {
                 required
               />
 
-              <textarea name="message" placeholder="message" cols="30" rows="6"></textarea>
+              <textarea
+                name="message"
+                placeholder="message"
+                cols="30"
+                rows="6"
+              ></textarea>
               <input type="submit" value="Send" />
             </form>
           </div>
         </div>
-
       </Wrapper>
-
-    </> 
+    </>
   );
 };
 
 export default Contact;
-
 

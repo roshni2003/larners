@@ -6,11 +6,12 @@ import Course from './header/Course';
 import PaymentStatus from './header/PaymentStatus';
 import Feedback from './header/Feedback';
 import FeedbackData from './FeedbackData';
-import Contact from './header/Contact';
 import Registration from './Registration';
 import Login from './login';
 import ForgetPassword from './forgetpassword';
 import Home from './header/Home';
+import Donate from './student/Donate';
+import Contact from './student/Contact';
 import StudentProfile from './student/StudentProfile';
 // Check file extension in the import statement
 
@@ -30,15 +31,15 @@ const Routing = () => {
                 <Route path="/reset-password" element={<ForgetPassword />} />
               
                 <Route path="/payment" element={<PaymentStatus />} />
-                <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Registration />} />
                 <Route path="/studentprofile" element={<StudentProfile />} />
                 <Route path="/Course" element ={<Course/>} />
             
                 <Route path="/feedback" element={<Feedback />} />
                 <Route path="/feedbackData" element={<FeedbackData/>}/>
-                <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Registration />} />
+                <Route path="/donate" element={<Donate />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/studentprofile" element={<StudentProfile />} />
 
             </Routes>

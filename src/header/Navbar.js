@@ -62,6 +62,18 @@ const Navbar = () => {
                 ))}
               </>
             )}
+            <Button color="inherit">
+            <Link to="/donate" style={linkStyle}>
+              Donate
+            </Link>
+          </Button>
+            
+            <Button color="inherit">
+            <Link to="/contact" style={linkStyle}>
+              Contact
+            </Link>
+          </Button>
+            
             <IconButton color="inherit">
               <Link to="/studentprofile" style={linkStyle}>
                 <PersonIcon />

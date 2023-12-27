@@ -13,7 +13,7 @@ function Cplush() {
   const [selectedCourse, setSelectedCourse] = useState(null);
 
   const fetchData = () => {
-    fetch('  http://localhost:3000/Cplus')
+    fetch('http://localhost:3000/Cplus')
       .then((res) => res.json())
       .then((res) => setCourses(res))
       .catch((error) => {

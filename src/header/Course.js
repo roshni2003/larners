@@ -1,83 +1,34 @@
 import React, { useState } from 'react';
-import { MenuItem, Menu, Button, ListItemIcon } from '@mui/material';
-import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
-import CodeIcon from '@mui/icons-material/Code';
-import ComputerIcon from '@mui/icons-material/Computer';
-import LanguageIcon from '@mui/icons-material/Language';
-import SchoolIcon from '@mui/icons-material/School';
-
-import Javascript from './Javascript';
-import Cplush from './Cplush';
 import Python from './Python';
+import Javascript from './Javascript';
 import English from './English';
+import Cplush from './Cplush';
 
 const Course = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [selectedCourse, setSelectedCourse] = useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleCourseSelect = (event) => {
+    setSelectedCourse(event.target.value);
   };
 
   return (
-    <BrowserRouter>
-      <div>
-        <Button
-          aria-controls="language-menu"
-          aria-haspopup="true"
-          onClick={handleClick}
-          style={{ marginRight: '20px', backgroundColor: '#64b5f6', color: 'red' }}
-        >
-          Learn
-        </Button>
-        <Menu
-          id="language-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem component={Link} to="/Cource/Javascript" onClick={handleClose}>
-            <ListItemIcon>
-              <CodeIcon />
-            </ListItemIcon>
-            Javascript
-          </MenuItem>
-          <MenuItem component={Link} to="/Cource/Cplush" onClick={handleClose}>
-            <ListItemIcon>
-              <ComputerIcon />
-            </ListItemIcon>
-            C++
-          </MenuItem>
-          <MenuItem component={Link} to="/Cource/Python" onClick={handleClose}>
-            <ListItemIcon>
-              <LanguageIcon />
-            </ListItemIcon>
-            Python
-          </MenuItem>
-          <MenuItem component={Link} to="/Cource/English" onClick={handleClose}>
-            <ListItemIcon>
-              <SchoolIcon />
-            </ListItemIcon>
-            English
-          </MenuItem>
-        </Menu>
+    <div>
+      <label htmlFor="courseDropdown"><b>Select a course:</b> </label>
+      <select id="courseDropdown" onChange={handleCourseSelect}>
+        <option value=""><b>Learn</b></option>
+        <option value="English">English</option>
+        <option value="Javascript">Javascript</option>
+        <option value="Python">Python</option>
+        <option value="Cplush">Cplush</option>
+      </select>
 
-        <Routes>
-          <React.Suspense fallback={<div>Loading...</div>}>
-            <React.ErrorBoundary>
-              <Route path="/Cource/Javascript/*" element={<Javascript />} />
-              <Route path="/Cource/Cplush/*" element={<Cplush />} />
-              <Route path="/Cource/Python/*" element={<Python />} />
-              <Route path="/Cource/English/*" element={<English />} />
-            </React.ErrorBoundary>
-          </React.Suspense>
-        </Routes>
+      <hr />
 
-      </div>
-    </BrowserRouter>
+      {selectedCourse === 'English' && <English />}
+      {selectedCourse === 'Javascript' && <Javascript />}
+      {selectedCourse === 'Python' && <Python />}
+      {selectedCourse === 'Cplush' && <Cplush />}
+    </div>
   );
 };
 

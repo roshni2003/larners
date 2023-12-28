@@ -6,6 +6,7 @@ const containerStyle = {
   border: '1px solid #ccc',
   padding: '20px',
   textAlign: 'center', 
+  width:'100%'
 };
 
 function Javascript() {
@@ -32,17 +33,17 @@ function Javascript() {
   };
 
   return (
-    <Container style={containerStyle}>
+    <Container style={{ ...containerStyle }}>
       <h4>Javascript Courses</h4>
       {!selectedCourse ? (
-        <Grid container spacing={2}>
+        <Grid container spacing={7}>
           {courses.map((course) => (
-            <Grid item key={course.id} xs={400} md={200} lg={41}>
+            <Grid item key={course.id} xs={12} sm={6} md={4} lg={3}>
               <Card>
                 <img
                   src={course.imageUrl}
                   alt={course.title}
-                  style={{ width: '170%', height: 'auto' }}
+                  style={{ width: '100%', height: '100%' }}
                 />
                 <CardContent>
                   <p><b>{course.title}</b></p>
@@ -64,7 +65,7 @@ function Javascript() {
           <h5>{selectedCourse.title} - Details</h5>
           {selectedCourse.courseTopics.map((topic, index) => (
             <div key={index}>
-             <p sx={{ width: '50%', height: 'auto' }}><b>Week: {topic.topic}</b></p>
+             <p sx={{ width: '100%', height: '50%' }}><b>Week: {topic.topic}</b></p>
               <img
                 src={topic.imageUrl}
                 alt={`Week ${topic.week}`}
@@ -73,6 +74,7 @@ function Javascript() {
               <p><a href={topic.videoUrl} target="_blank" rel="noopener noreferrer">
                 Watch Video
               </a></p>
+              <a href={topic.LINK}>Visit Example.com</a>
             </div>
           ))}
           <Button onClick={() => setSelectedCourse(null)}>Go Back</Button>

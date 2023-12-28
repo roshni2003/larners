@@ -33,7 +33,7 @@ function Cplush() {
 
   return (
     <Container style={containerStyle}>
-      <h4>Javascript Courses</h4>
+      <h4>C++ Courses</h4>
       {!selectedCourse ? (
         <Grid container spacing={2}>
           {courses.map((course) => (
@@ -73,6 +73,7 @@ function Cplush() {
               <p><a href={topic.videoUrl} target="_blank" rel="noopener noreferrer">
                 Watch Video
               </a></p>
+              <a href={topic.LINK}>Visit Example.com</a>
             </div>
           ))}
           <Button onClick={() => setSelectedCourse(null)}>Go Back</Button>

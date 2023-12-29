@@ -62,6 +62,18 @@ const Wrapper = styled("section")`
       }
     }
   }
+
+  @media (max-width: 600px) {
+    .container {
+      .profile {
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+  }
+
 `;
 
 const Contact = () => {
@@ -128,4 +140,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 

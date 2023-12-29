@@ -5,7 +5,7 @@ const Donate = () => {
   const handleDonate = (donationData) => {
     console.log('Donation Data:', donationData);
   };
-
+  
   return (
     <div>
       <DonationForm onDonate={handleDonate} />

@@ -171,7 +171,7 @@ const StyledCard = styled(Card)({
 const DonationForm = ({ onDonate }) => {
   // eslint-disable-next-line
   const isSmallScreen = useMediaQuery('(max-width:600px)');
-  
+
   const [formData, setFormData] = useState({
     amount: '',
     donorName: '',

@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './header/Navbar';
 import Course from './header/Course';
-
-import PaymentStatus from './header/PaymentStatus';
 import Feedback from './header/Feedback';
 import FeedbackData from './FeedbackData';
 import Registration from './Registration';
@@ -13,7 +11,6 @@ import Home from './header/Home';
 import Donate from './student/Donate';
 import Contact from './student/Contact';
 import StudentProfile from './student/StudentProfile';
-import Footer from './Footer/Footer';
 const Routing = () => {
     return (
         <BrowserRouter>
@@ -23,7 +20,6 @@ const Routing = () => {
                 <Route path="/" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/reset-password" element={<ForgetPassword />} />
-                <Route path="/payment" element={<PaymentStatus />} />
                 <Route path="/register" element={<Registration />} />
                 <Route path="/studentprofile" element={<StudentProfile />} />
                 <Route path="/Course" element ={<Course/>} />

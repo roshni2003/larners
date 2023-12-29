@@ -9,7 +9,7 @@ const Navbar = () => {
   const linkStyle = { color: 'black', textDecoration: 'none' };
   const courses = [
     { label: 'Course', link: '/Course' },
-    { label: 'Payment Status', link: '/payment' },
+
     { label: 'Feedback', link: '/feedback' },
     { label: 'Register', link: '/register' },
   ];
@@ -63,17 +63,17 @@ const Navbar = () => {
               </>
             )}
             <Button color="inherit">
-            <Link to="/donate" style={linkStyle}>
-              Donate
-            </Link>
-          </Button>
-            
+              <Link to="/donate" style={linkStyle}>
+                Donate
+              </Link>
+            </Button>
+
             <Button color="inherit">
-            <Link to="/contact" style={linkStyle}>
-              Contact
-            </Link>
-          </Button>
-            
+              <Link to="/contact" style={linkStyle}>
+                Contact
+              </Link>
+            </Button>
+
             <IconButton color="inherit">
               <Link to="/studentprofile" style={linkStyle}>
                 <PersonIcon />
